@@ -352,7 +352,7 @@ export default function AdminBranches() {
               icon: "error",
               title: "تم الرفض",
               text: "ليس لديك صلاحية للوصول إلى هذه الصفحة.",
-              confirmButtonColor: "#E41E26",
+              confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
               timer: 2500,
               showConfirmButton: false,
             });
@@ -382,7 +382,7 @@ export default function AdminBranches() {
             icon: "error",
             title: "تم الرفض",
             text: errorText || "فشل في التحقق من صلاحياتك.",
-            confirmButtonColor: "#E41E26",
+            confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
             timer: 2500,
             showConfirmButton: false,
           });
@@ -594,8 +594,8 @@ export default function AdminBranches() {
 
   if (isLoadingAuth || isLoadingData) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5f5] to-[#ffe5e5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#E41E26]"></div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FB7D2D]"></div>
       </div>
     );
   }
@@ -607,26 +607,26 @@ export default function AdminBranches() {
   return (
     <>
       <Helmet>
-        <title>صيدلية جيمي | Gemy Pharmacy</title>
+        <title>صيدلية | Pharmacy</title>
         <meta
           name="description"
-          content="صيدلية جيمي، نوفر لك كل ما تحتاجه من أدوية ومنتجات طبية وعناية شخصية بجودة عالية وخدمة مميزة."
+          content="نوفر لك كل ما تحتاجه من أدوية ومنتجات طبية وعناية شخصية بجودة عالية وخدمة مميزة."
         />
       </Helmet>
       <div
-        className="min-h-screen bg-gradient-to-br from-white via-[#fff5f5] to-[#ffe5e5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 md:px-6 py-3 sm:py-6 relative font-sans overflow-hidden"
+        className="min-h-screen bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 md:px-6 py-3 sm:py-6 relative font-sans overflow-hidden"
         dir="rtl"
       >
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-10 sm:-left-20 -top-10 sm:-top-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#E41E26]/10 to-[#d11c24]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
-          <div className="absolute -right-10 sm:-right-20 -bottom-10 sm:-bottom-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#d11c24]/10 to-[#E41E26]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
+          <div className="absolute -left-10 sm:-left-20 -top-10 sm:-top-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#FB7D2D]/10 to-[#e66a1f]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
+          <div className="absolute -right-10 sm:-right-20 -bottom-10 sm:-bottom-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#e66a1f]/10 to-[#FB7D2D]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
         </div>
 
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate(-1)}
-          className="fixed top-3 sm:top-4 left-3 sm:left-4 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md hover:bg-[#E41E26] hover:text-white rounded-full p-2 sm:p-3 text-[#E41E26] dark:text-gray-300 border border-[#E41E26] dark:border-gray-600 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl group"
+          className="fixed top-3 sm:top-4 left-3 sm:left-4 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md hover:bg-[#FB7D2D] hover:text-white rounded-full p-2 sm:p-3 text-[#FB7D2D] dark:text-gray-300 border border-[#FB7D2D] dark:border-gray-600 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl group"
         >
           <FaArrowLeft
             size={14}
@@ -653,7 +653,7 @@ export default function AdminBranches() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleAddNewBranch}
-                className="flex items-center gap-2 bg-[#E41E26] text-white px-4 sm:px-5 md:px-6 py-3 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl font-semibold shadow-2xl sm:shadow-3xl hover:shadow-4xl hover:shadow-[#E41E26]/50 transition-all duration-300 text-sm sm:text-base md:text-lg border-2 border-white whitespace-nowrap transform translate-y-2 hover:bg-[#d11c24]"
+                className="flex items-center gap-2 bg-[#FB7D2D] text-white px-4 sm:px-5 md:px-6 py-3 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl font-semibold shadow-2xl sm:shadow-3xl hover:shadow-4xl hover:shadow-[#FB7D2D]/50 transition-all duration-300 text-sm sm:text-base md:text-lg border-2 border-white whitespace-nowrap transform translate-y-2 hover:bg-[#e66a1f]"
               >
                 <FaPlus className="text-sm sm:text-base md:text-lg" />
                 <span>إضافة فرع جديد</span>
@@ -712,7 +712,7 @@ export default function AdminBranches() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={handleAddNewBranch}
-                        className="flex items-center gap-2 bg-[#E41E26] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base mx-auto border border-[#E41E26] hover:bg-[#d11c24]"
+                        className="flex items-center gap-2 bg-[#FB7D2D] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base mx-auto border border-[#FB7D2D] hover:bg-[#e66a1f]"
                       >
                         <FaPlus className="text-xs sm:text-sm" />
                         <span>أضف أول فرع لك</span>

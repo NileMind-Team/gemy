@@ -463,14 +463,14 @@ export default function Profile() {
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5f5] to-[#ffe5e5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#E41E26]"></div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FB7D2D]"></div>
       </div>
     );
   }
 
   const fieldClass =
-    "w-full border border-gray-300 bg-white/80 backdrop-blur-sm text-black rounded-xl px-4 py-3.5 outline-none focus:ring-2 focus:ring-[#E41E26] focus:border-transparent transition-all duration-200 hover:border-[#E41E26] dark:bg-gray-600/80 dark:border-gray-500 dark:text-white text-right";
+    "w-full border border-gray-300 bg-white/80 backdrop-blur-sm text-black rounded-xl px-4 py-3.5 outline-none focus:ring-2 focus:ring-[#FB7D2D] focus:border-transparent transition-all duration-200 hover:border-[#FB7D2D] dark:bg-gray-600/80 dark:border-gray-500 dark:text-white text-right";
 
   const tabs = [
     {
@@ -490,21 +490,21 @@ export default function Profile() {
   return (
     <>
       <Helmet>
-        <title>صيدلية جيمي | Gemy Pharmacy</title>
+        <title>صيدلية | Pharmacy</title>
         <meta
           name="description"
-          content="صيدلية جيمي، نوفر لك كل ما تحتاجه من أدوية ومنتجات طبية وعناية شخصية بجودة عالية وخدمة مميزة."
+          content="نوفر لك كل ما تحتاجه من أدوية ومنتجات طبية وعناية شخصية بجودة عالية وخدمة مميزة."
         />
       </Helmet>
       <div
-        className={`min-h-screen bg-gradient-to-br from-white via-[#fff5f5] to-[#ffe5e5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4 py-4 sm:py-8 relative font-sans overflow-hidden transition-colors duration-300`}
+        className={`min-h-screen bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4 py-4 sm:py-8 relative font-sans overflow-hidden transition-colors duration-300`}
         dir="rtl"
       >
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-20 -top-20 w-60 h-60 sm:w-80 sm:h-80 bg-[#E41E26]/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -right-20 -bottom-20 w-60 h-60 sm:w-80 sm:h-80 bg-[#E41E26]/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-[#E41E26]/5 rounded-full blur-3xl"></div>
+          <div className="absolute -left-20 -top-20 w-60 h-60 sm:w-80 sm:h-80 bg-[#FB7D2D]/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -right-20 -bottom-20 w-60 h-60 sm:w-80 sm:h-80 bg-[#FB7D2D]/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-[#FB7D2D]/5 rounded-full blur-3xl"></div>
         </div>
 
         {/* Back Button */}
@@ -512,7 +512,7 @@ export default function Profile() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate(-1)}
-          className="fixed top-4 left-4 z-50 bg-white/80 backdrop-blur-md hover:bg-[#E41E26] hover:text-white rounded-full p-2 sm:p-3 text-[#E41E26] border border-gray-300 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl group dark:bg-gray-800/80 dark:text-gray-200 dark:hover:bg-[#E41E26] dark:border-gray-600"
+          className="fixed top-4 left-4 z-50 bg-white/80 backdrop-blur-md hover:bg-[#FB7D2D] hover:text-white rounded-full p-2 sm:p-3 text-[#FB7D2D] border border-gray-300 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl group dark:bg-gray-800/80 dark:text-gray-200 dark:hover:bg-[#FB7D2D] dark:border-gray-600"
         >
           <FaArrowLeft
             size={16}
@@ -527,7 +527,7 @@ export default function Profile() {
           className="max-w-4xl mx-auto bg-white/90 backdrop-blur-xl shadow-2xl rounded-3xl border border-gray-300 relative overflow-hidden dark:bg-gray-800/90 dark:border-gray-600"
         >
           {/* Header Background */}
-          <div className="relative h-24 sm:h-32 bg-[#E41E26] overflow-hidden">
+          <div className="relative h-24 sm:h-32 bg-[#FB7D2D] overflow-hidden">
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="absolute -top-6 -right-6 w-24 h-24 sm:w-40 sm:h-40 bg-white/10 rounded-full"></div>
             <div className="absolute -bottom-6 -left-6 w-20 h-20 sm:w-32 sm:h-32 bg-white/10 rounded-full"></div>
@@ -551,13 +551,13 @@ export default function Profile() {
                     className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full object-cover border-4 border-white shadow-2xl dark:border-gray-800"
                   />
                 ) : (
-                  <div className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full bg-[#E41E26] text-white flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl font-bold border-4 border-white shadow-2xl dark:border-gray-800">
+                  <div className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full bg-[#FB7D2D] text-white flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl font-bold border-4 border-white shadow-2xl dark:border-gray-800">
                     {user.firstName?.charAt(0).toUpperCase() || "م"}
                   </div>
                 )}
 
                 {isEditingProfile && activeTab === "profile" && (
-                  <label className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 bg-[#E41E26] hover:bg-[#d11c24] text-white p-2 sm:p-3 rounded-full shadow-2xl cursor-pointer transition-all duration-300 hover:scale-110 group-hover:scale-110 border border-white">
+                  <label className="absolute bottom-1 left-1 sm:bottom-2 sm:left-2 bg-[#FB7D2D] hover:bg-[#e66a1f] text-white p-2 sm:p-3 rounded-full shadow-2xl cursor-pointer transition-all duration-300 hover:scale-110 group-hover:scale-110 border border-white">
                     <input
                       type="file"
                       className="hidden"
@@ -588,7 +588,7 @@ export default function Profile() {
                   <span className="truncate block max-w-[200px] sm:max-w-[300px] lg:max-w-[400px] text-right">
                     {user.email}
                   </span>
-                  <FaEnvelope className="text-[#E41E26] flex-shrink-0" />
+                  <FaEnvelope className="text-[#FB7D2D] flex-shrink-0" />
                 </motion.p>
               </div>
 
@@ -604,7 +604,7 @@ export default function Profile() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsEditingProfile(true)}
-                    className="flex items-center gap-2 bg-[#E41E26] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-[#d11c24] transition-all duration-300 text-sm sm:text-base border border-[#E41E26]"
+                    className="flex items-center gap-2 bg-[#FB7D2D] text-white px-4 py-2 sm:px-6 sm:py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-[#e66a1f] transition-all duration-300 text-sm sm:text-base border border-[#FB7D2D]"
                   >
                     <FaEdit className="flex-shrink-0" />
                     <span className="hidden sm:inline">تعديل الملف الشخصي</span>
@@ -619,7 +619,7 @@ export default function Profile() {
                       disabled={!hasChanges}
                       className={`flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-xl font-semibold shadow-lg transition-all duration-300 text-sm sm:text-base border ${
                         hasChanges
-                          ? "bg-[#E41E26] text-white hover:shadow-xl hover:bg-[#d11c24] border-[#E41E26]"
+                          ? "bg-[#FB7D2D] text-white hover:shadow-xl hover:bg-[#e66a1f] border-[#FB7D2D]"
                           : "bg-gray-300 text-gray-500 cursor-not-allowed border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600"
                       }`}
                     >
@@ -645,12 +645,12 @@ export default function Profile() {
                     React.createElement(
                       tabs.find((tab) => tab.id === activeTab).icon,
                       {
-                        className: "text-[#E41E26] text-xl",
+                        className: "text-[#FB7D2D] text-xl",
                       },
                     )}
                   <span>{tabs.find((tab) => tab.id === activeTab)?.label}</span>
                 </div>
-                <FaBars className="text-[#E41E26]" />
+                <FaBars className="text-[#FB7D2D]" />
               </motion.button>
 
               {/* Mobile Dropdown Menu */}
@@ -675,7 +675,7 @@ export default function Profile() {
                         }}
                         className={`w-full flex items-center gap-3 p-4 text-right transition-all duration-200 border-b ${
                           activeTab === tab.id
-                            ? "bg-gray-100 text-[#E41E26] dark:bg-gray-600"
+                            ? "bg-gray-100 text-[#FB7D2D] dark:bg-gray-600"
                             : "text-gray-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-600"
                         } ${
                           tab.id === tabs[tabs.length - 1].id
@@ -712,8 +712,8 @@ export default function Profile() {
                   }}
                   className={`flex items-center gap-3 flex-1 py-4 px-6 rounded-xl font-semibold transition-all duration-300 text-right border ${
                     activeTab === tab.id
-                      ? "bg-white text-[#E41E26] shadow-lg dark:bg-gray-600 dark:text-[#E41E26] border-[#E41E26] dark:border-[#E41E26]"
-                      : "text-gray-600 hover:text-[#E41E26] hover:bg-white/50 dark:text-gray-300 dark:hover:bg-gray-600/50 border-transparent"
+                      ? "bg-white text-[#FB7D2D] shadow-lg dark:bg-gray-600 dark:text-[#FB7D2D] border-[#FB7D2D] dark:border-[#FB7D2D]"
+                      : "text-gray-600 hover:text-[#FB7D2D] hover:bg-white/50 dark:text-gray-300 dark:hover:bg-gray-600/50 border-transparent"
                   }`}
                 >
                   <tab.icon className="text-xl flex-shrink-0" />
@@ -722,7 +722,7 @@ export default function Profile() {
                     <div
                       className={`text-sm mt-1 ${
                         activeTab === tab.id
-                          ? "text-[#E41E26]/80 dark:text-[#E41E26]/70"
+                          ? "text-[#FB7D2D]/80 dark:text-[#FB7D2D]/70"
                           : "text-gray-500 dark:text-gray-400"
                       }`}
                     >
@@ -746,7 +746,7 @@ export default function Profile() {
                 >
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-300 shadow-lg dark:bg-gray-700/80 dark:border-gray-600">
                     <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-200 mb-3 sm:mb-4 flex items-center gap-2 justify-start">
-                      <FaUser className="text-[#E41E26]" />
+                      <FaUser className="text-[#FB7D2D]" />
                       المعلومات الشخصية
                     </h3>
 
@@ -758,7 +758,7 @@ export default function Profile() {
                         </label>
                         <div className="relative group">
                           <FaUser
-                            className={`absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#E41E26] text-lg transition-all duration-300 group-focus-within:scale-110 ${
+                            className={`absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#FB7D2D] text-lg transition-all duration-300 group-focus-within:scale-110 ${
                               isEditingProfile ? "opacity-100" : "opacity-70"
                             }`}
                           />
@@ -787,7 +787,7 @@ export default function Profile() {
                         </label>
                         <div className="relative group">
                           <FaUser
-                            className={`absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#E41E26] text-lg transition-all duration-300 group-focus-within:scale-110 ${
+                            className={`absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#FB7D2D] text-lg transition-all duration-300 group-focus-within:scale-110 ${
                               isEditingProfile ? "opacity-100" : "opacity-70"
                             }`}
                           />
@@ -815,7 +815,7 @@ export default function Profile() {
                           البريد الإلكتروني
                         </label>
                         <div className="relative group">
-                          <FaEnvelope className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#E41E26] text-lg transition-all duration-300 opacity-70" />
+                          <FaEnvelope className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#FB7D2D] text-lg transition-all duration-300 opacity-70" />
                           <div className="w-full border border-gray-300 bg-gray-100/50 text-gray-800 text-base sm:text-lg font-medium pr-10 sm:pr-12 py-3 sm:py-3.5 rounded-xl truncate dark:bg-gray-600/50 dark:text-gray-200 dark:border-gray-500 text-right">
                             {user.email}
                           </div>
@@ -829,7 +829,7 @@ export default function Profile() {
                         </label>
                         <div className="relative group">
                           <FaPhone
-                            className={`absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#E41E26] text-lg transition-all duration-300 group-focus-within:scale-110 ${
+                            className={`absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#FB7D2D] text-lg transition-all duration-300 group-focus-within:scale-110 ${
                               isEditingProfile ? "opacity-100" : "opacity-70"
                             }`}
                           />
@@ -866,7 +866,7 @@ export default function Profile() {
                 >
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-300 shadow-lg dark:bg-gray-700/80 dark:border-gray-600">
                     <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-200 mb-3 sm:mb-4 flex items-center gap-2 justify-start">
-                      <FaKey className="text-[#E41E26]" />
+                      <FaKey className="text-[#FB7D2D]" />
                       تغيير كلمة المرور
                     </h3>
 
@@ -877,7 +877,7 @@ export default function Profile() {
                           كلمة المرور الحالية
                         </label>
                         <div className="relative group">
-                          <FaLock className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#E41E26] text-lg transition-all duration-300 group-focus-within:scale-110 opacity-70" />
+                          <FaLock className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#FB7D2D] text-lg transition-all duration-300 group-focus-within:scale-110 opacity-70" />
                           <input
                             type={showPassword.old ? "text" : "password"}
                             name="oldPassword"
@@ -896,7 +896,7 @@ export default function Profile() {
                                 old: !showPassword.old,
                               })
                             }
-                            className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#E41E26] cursor-pointer transition-all duration-200 hover:scale-110 dark:text-gray-400"
+                            className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#FB7D2D] cursor-pointer transition-all duration-200 hover:scale-110 dark:text-gray-400"
                           >
                             {showPassword.old ? <FaEyeSlash /> : <FaEye />}
                           </div>
@@ -909,7 +909,7 @@ export default function Profile() {
                           كلمة المرور الجديدة
                         </label>
                         <div className="relative group">
-                          <FaLock className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#E41E26] text-lg transition-all duration-300 group-focus-within:scale-110 opacity-70" />
+                          <FaLock className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-[#FB7D2D] text-lg transition-all duration-300 group-focus-within:scale-110 opacity-70" />
                           <input
                             type={showPassword.new ? "text" : "password"}
                             name="newPassword"
@@ -928,7 +928,7 @@ export default function Profile() {
                                 new: !showPassword.new,
                               })
                             }
-                            className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#E41E26] cursor-pointer transition-all duration-200 hover:scale-110 dark:text-gray-400"
+                            className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#FB7D2D] cursor-pointer transition-all duration-200 hover:scale-110 dark:text-gray-400"
                           >
                             {showPassword.new ? <FaEyeSlash /> : <FaEye />}
                           </div>
@@ -937,7 +937,7 @@ export default function Profile() {
 
                       {/* Password Requirements */}
                       <div className="bg-gray-100 p-3 sm:p-4 rounded-xl border border-gray-300 space-y-2 dark:bg-gray-600 dark:border-gray-500">
-                        <p className="text-sm font-semibold text-[#E41E26] mb-2 text-right">
+                        <p className="text-sm font-semibold text-[#FB7D2D] mb-2 text-right">
                           متطلبات كلمة المرور:
                         </p>
                         <div className="grid grid-cols-1 gap-1 sm:gap-2 text-right">
@@ -969,7 +969,7 @@ export default function Profile() {
                         }
                         className={`w-full font-semibold py-3 sm:py-3.5 rounded-xl transition-all duration-300 text-base sm:text-lg border ${
                           allPasswordValid && passwordData.oldPassword
-                            ? "bg-[#E41E26] text-white hover:bg-[#d11c24] hover:shadow-xl border-[#E41E26]"
+                            ? "bg-[#FB7D2D] text-white hover:bg-[#e66a1f] hover:shadow-xl border-[#FB7D2D]"
                             : "bg-gray-300 text-gray-500 cursor-not-allowed border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600"
                         }`}
                       >

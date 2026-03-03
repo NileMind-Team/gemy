@@ -10,7 +10,7 @@ import {
 const DataDeletion = () => {
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 py-16 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen bg-gradient-to-br from-orange-50 to-white dark:from-gray-900 dark:to-gray-800 py-16 px-4 sm:px-6 lg:px-8"
       dir="ltr"
     >
       <div className="max-w-4xl mx-auto">
@@ -20,7 +20,7 @@ const DataDeletion = () => {
           transition={{ duration: 0.5 }}
           className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700"
         >
-          <div className="bg-gradient-to-r from-[#E41E26] to-[#B71C1C] px-8 py-6">
+          <div className="bg-gradient-to-r from-[#FB7D2D] to-[#e66a1f] px-8 py-6">
             <div className="flex items-center justify-between">
               <h1 className="text-3xl font-bold text-white flex items-center gap-3">
                 <FaTrashAlt className="text-2xl" />
@@ -43,9 +43,9 @@ const DataDeletion = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="space-y-6"
             >
-              <div className="flex items-start gap-4 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-800">
+              <div className="flex items-start gap-4 p-6 bg-orange-50 dark:bg-orange-900/20 rounded-xl border border-orange-200 dark:border-orange-800">
                 <div className="flex-shrink-0">
-                  <FaEnvelope className="text-2xl text-amber-600 dark:text-amber-400" />
+                  <FaEnvelope className="text-2xl text-[#FB7D2D] dark:text-orange-400" />
                 </div>
                 <div className="space-y-4">
                   <p className="text-gray-800 dark:text-gray-200 text-lg">
@@ -54,7 +54,7 @@ const DataDeletion = () => {
                   </p>
                   <a
                     href="mailto:triples.software.1@gmail.com"
-                    className="inline-block text-[#E41E26] hover:text-[#B71C1C] font-bold text-xl transition-colors bg-red-50 dark:bg-red-900/20 px-6 py-3 rounded-lg"
+                    className="inline-block text-[#FB7D2D] hover:text-[#e66a1f] font-bold text-xl transition-colors bg-orange-50 dark:bg-orange-900/20 px-6 py-3 rounded-lg"
                   >
                     triples.software.1@gmail.com
                   </a>
@@ -63,20 +63,20 @@ const DataDeletion = () => {
 
               <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 space-y-4">
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#E41E26] rounded-full"></span>
+                  <span className="w-2 h-2 bg-[#FB7D2D] rounded-full"></span>
                   Email Instructions
                 </h2>
 
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <span className="font-bold text-[#E41E26]">Subject:</span>
+                    <span className="font-bold text-[#FB7D2D]">Subject:</span>
                     <span className="text-gray-700 dark:text-gray-300 font-mono bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded">
                       Data Deletion Request
                     </span>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <span className="font-bold text-[#E41E26]">Message:</span>
+                    <span className="font-bold text-[#FB7D2D]">Message:</span>
                     <span className="text-gray-700 dark:text-gray-300">
                       Please include your registered email address in the
                       message.
@@ -94,7 +94,7 @@ const DataDeletion = () => {
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 text-lg">
                       We will process your request within{" "}
-                      <span className="font-bold text-[#E41E26]">48 hours</span>
+                      <span className="font-bold text-[#FB7D2D]">48 hours</span>
                       .
                     </p>
                   </div>
