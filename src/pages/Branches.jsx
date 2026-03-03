@@ -294,10 +294,10 @@ const Branches = () => {
   return (
     <>
       <Helmet>
-        <title>الزاوي نيو | El-Zawy New</title>
+        <title>صيدلية جيمي | Gemy Pharmacy</title>
         <meta
           name="description"
-          content="الزاوي نيو، مطعم عصري يقدم أفضل المأكولات الشرقية والغربية وتجربة طعام فريدة، مع خدمة عالية الجودة."
+          content="صيدلية جيمي، نوفر لك كل ما تحتاجه من أدوية ومنتجات طبية وعناية شخصية بجودة عالية وخدمة مميزة."
         />
       </Helmet>
 
@@ -412,7 +412,7 @@ const Branches = () => {
                 transition={{ delay: 0.4 }}
                 className="text-white/80 text-xs sm:text-sm md:text-base px-2"
               >
-                اكتشف فروع ElZawy - New القريبة منك وتعرّف على تفاصيل كل فرع
+                اكتشف فروع Gemy القريبة منك وتعرّف على تفاصيل كل فرع
                 وتقييمات العملاء
               </motion.p>
             </div>

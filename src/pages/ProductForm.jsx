@@ -1169,10 +1169,10 @@ const ProductForm = () => {
   return (
     <>
       <Helmet>
-        <title>الزاوي نيو | El-Zawy New</title>
+        <title>صيدلية جيمي | Gemy Pharmacy</title>
         <meta
           name="description"
-          content="الزاوي نيو، مطعم عصري يقدم أفضل المأكولات الشرقية والغربية وتجربة طعام فريدة، مع خدمة عالية الجودة."
+          content="صيدلية جيمي، نوفر لك كل ما تحتاجه من أدوية ومنتجات طبية وعناية شخصية بجودة عالية وخدمة مميزة."
         />
       </Helmet>
       <div
