@@ -217,43 +217,43 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           onClick: handleAdminUsersClick,
           icon: FaUsers,
           label: "إدارة المستخدمين",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleAdminBranchesClick,
           icon: FaBuilding,
           label: "إدارة الفروع",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleDeliveryCostClick,
           icon: FaMoneyBillWave,
           label: "تكاليف التوصيل",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleItemOffersClick,
           icon: FaPercent,
           label: "إدارة الخصومات",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleCitiesClick,
           icon: FaCity,
           label: "إدارة المدن",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleReportsClick,
           icon: FaChartBar,
           label: "تقارير المبيعات",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleTimeDateReportsClick,
           icon: FaCalendarAlt,
           label: "تقارير المبيعات بالوقت والتاريخ",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
       );
     }
@@ -264,37 +264,37 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           onClick: handleAdminUsersClick,
           icon: FaUsers,
           label: "إدارة المستخدمين",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleDeliveryCostClick,
           icon: FaMoneyBillWave,
           label: "تكاليف التوصيل",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleItemOffersClick,
           icon: FaPercent,
           label: "إدارة الخصومات",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleCitiesClick,
           icon: FaCity,
           label: "إدارة المدن",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleReportsClick,
           icon: FaChartBar,
           label: "تقارير المبيعات",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
         {
           onClick: handleTimeDateReportsClick,
           icon: FaCalendarAlt,
           label: "تقارير الوقت والتاريخ",
-          color: "#FB7D2D",
+          color: "#2E3D88",
         },
       ];
 
@@ -313,15 +313,15 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FB7D2D]"></div>
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#2E3D88]"></div>
       </div>
     );
   }
 
   return (
     <>
-      <nav className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl shadow-lg py-4 px-4 sm:px-6 flex items-center justify-between sticky top-0 z-50 border-b border-[#FB7D2D]/30 dark:border-gray-700 transition-colors duration-300">
+      <nav className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl shadow-lg py-4 px-4 sm:px-6 flex items-center justify-between sticky top-0 z-50 border-b border-[#2E3D88]/30 dark:border-gray-700 transition-colors duration-300">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -345,7 +345,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               />
 
               {/* Home Icon on Small Screens - Inside Logo */}
-              <div className="md:hidden absolute -top-1 -right-1 bg-[#FB7D2D] dark:bg-[#FB7D2D] rounded-full p-1 border-2 border-white dark:border-gray-900 shadow-sm">
+              <div className="md:hidden absolute -top-1 -right-1 bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] rounded-full p-1 border-2 border-white dark:border-gray-900 shadow-sm">
                 <FaHome className="text-white text-xs" />
               </div>
             </div>
@@ -353,17 +353,17 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             <div className="flex flex-col items-start">
               {/* Title and Icon for Medium+ Screens */}
               <div className="flex items-center gap-2">
-                <h1 className="hidden md:block text-xl lg:text-2xl font-bold text-[#FB7D2D] dark:text-[#FB7D2D] transition-all duration-300">
+                <h1 className="hidden md:block text-xl lg:text-2xl font-bold text-[#2E3D88] dark:text-[#2E3D88] transition-all duration-300">
                   Pharmacy
                 </h1>
 
                 {/* Home Icon for Medium+ Screens */}
-                <FaHome className="hidden md:block text-[#FB7D2D] dark:text-[#FB7D2D] text-sm transition-all duration-300" />
+                <FaHome className="hidden md:block text-[#2E3D88] dark:text-[#2E3D88] text-sm transition-all duration-300" />
               </div>
 
               {/* Home Indicator Text - All Screens */}
               <div className="flex items-center gap-1">
-                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 flex items-center gap-1 transition-all duration-300 group-hover:text-[#FB7D2D] dark:group-hover:text-[#FB7D2D]">
+                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 flex items-center gap-1 transition-all duration-300 group-hover:text-[#2E3D88] dark:group-hover:text-[#2E3D88]">
                   {/* Show Arrow on Small Screens, Home Icon on Medium+ */}
                   <span className="md:hidden flex items-center gap-1">
                     <FaArrowLeft className="text-[10px]" />
@@ -380,7 +380,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </div>
 
             {/* Hover Effect Ring - Only for Medium+ Screens */}
-            <div className="hidden md:block absolute inset-0 -m-2 rounded-2xl bg-[#FB7D2D] pointer-events-none opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+            <div className="hidden md:block absolute inset-0 -m-2 rounded-2xl bg-[#2E3D88] pointer-events-none opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
           </Link>
         </motion.div>
 
@@ -417,7 +417,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     className="w-8 h-8 rounded-full object-cover border border-gray-300 dark:border-gray-500"
                   />
                 ) : (
-                  <div className="w-8 h-8 rounded-full bg-[#FB7D2D] text-white flex items-center justify-center font-semibold border border-gray-300 dark:border-gray-500">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white flex items-center justify-center font-semibold border border-gray-300 dark:border-gray-500">
                     {getInitial(userData.firstName)}
                   </div>
                 )}
@@ -433,7 +433,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 whileHover={{ scale: 1.05 }}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
-                <div className="flex items-center gap-2 bg-[#FB7D2D] px-4 sm:px-6 py-2.5 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl hover:bg-[#e66a1f] transition-all duration-300 border border-[#FB7D2D]">
+                <div className="flex items-center gap-2 bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] px-4 sm:px-6 py-2.5 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300">
                   <span>ابدأ الآن</span>
                   <motion.div
                     animate={{ rotate: isDropdownOpen ? 180 : 0 }}
@@ -482,7 +482,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                             onClick={() => handleAuthClick(link.path)}
                             className={`w-full text-right flex items-center justify-between gap-3 px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200 font-medium rounded-lg border ${
                               location.pathname === link.path
-                                ? "bg-gray-100 dark:bg-gray-700 text-[#FB7D2D] dark:text-[#FB7D2D] border-gray-300 dark:border-gray-600"
+                                ? "bg-gray-100 dark:bg-gray-700 text-[#2E3D88] dark:text-[#2E3D88] border-gray-300 dark:border-gray-600"
                                 : "border-transparent"
                             }`}
                             dir="rtl"
@@ -531,7 +531,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                   onClick={() => setIsSidebarOpen(false)}
                   className="p-2 absolute top-3 right-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors duration-200 border border-gray-300 dark:border-gray-600"
                 >
-                  <FaTimes className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                  <FaTimes className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                 </motion.button>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -539,10 +539,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       <img
                         src={userData.avatar}
                         alt="صورة المستخدم"
-                        className="w-12 h-12 rounded-full object-cover border-2 border-[#FB7D2D] dark:border-[#FB7D2D]"
+                        className="w-12 h-12 rounded-full object-cover border-2 border-[#2E3D88] dark:border-[#2E3D88]"
                       />
                     ) : (
-                      <div className="w-12 h-12 rounded-full bg-[#FB7D2D] text-white flex items-center justify-center font-semibold text-lg border-2 border-[#FB7D2D] dark:border-[#FB7D2D]">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white flex items-center justify-center font-semibold text-lg border-2 border-[#2E3D88] dark:border-[#2E3D88]">
                         {getInitial(userData.firstName)}
                       </div>
                     )}
@@ -557,11 +557,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       <div className="flex flex-wrap gap-1 mt-1">
                         {hasRole("Admin") && (
                           <div
-                            className="flex flex-row items-center gap-1 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 px-2 py-1 rounded-full border border-[#FB7D2D]/20"
+                            className="flex flex-row items-center gap-1 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 px-2 py-1 rounded-full border border-[#2E3D88]/20"
                             dir="rtl"
                           >
-                            <FaUserShield className="text-[#FB7D2D] dark:text-[#FB7D2D] text-xs" />
-                            <span className="text-xs text-[#FB7D2D] dark:text-[#FB7D2D] font-semibold truncate">
+                            <FaUserShield className="text-[#2E3D88] dark:text-[#2E3D88] text-xs" />
+                            <span className="text-xs text-[#2E3D88] dark:text-[#2E3D88] font-semibold truncate">
                               مدير
                             </span>
                           </div>
@@ -619,8 +619,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
                       dir="rtl"
                     >
-                      <div className="flex-shrink-0 p-2 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 rounded-lg border border-[#FB7D2D]/20">
-                        <FaHome className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                      <div className="flex-shrink-0 p-2 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 rounded-lg border border-[#2E3D88]/20">
+                        <FaHome className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                       </div>
                       <span className="text-lg truncate">الصفحة الرئيسية</span>
                     </button>
@@ -671,8 +671,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
                       dir="rtl"
                     >
-                      <div className="flex-shrink-0 p-2 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 rounded-lg border border-[#FB7D2D]/20">
-                        <FaUser className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                      <div className="flex-shrink-0 p-2 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 rounded-lg border border-[#2E3D88]/20">
+                        <FaUser className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                       </div>
                       <span className="text-lg truncate">ملفي الشخصي</span>
                     </button>
@@ -687,8 +687,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
                       dir="rtl"
                     >
-                      <div className="flex-shrink-0 p-2 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 rounded-lg border border-[#FB7D2D]/20">
-                        <FaClipboardList className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                      <div className="flex-shrink-0 p-2 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 rounded-lg border border-[#2E3D88]/20">
+                        <FaClipboardList className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                       </div>
                       <span className="text-lg truncate">طلباتي</span>
                     </button>
@@ -703,8 +703,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
                       dir="rtl"
                     >
-                      <div className="flex-shrink-0 p-2 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 rounded-lg border border-[#FB7D2D]/20">
-                        <FaShoppingCart className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                      <div className="flex-shrink-0 p-2 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 rounded-lg border border-[#2E3D88]/20">
+                        <FaShoppingCart className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                       </div>
                       <span className="text-lg truncate">عربة التسوق</span>
                     </button>
@@ -719,8 +719,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
                       dir="rtl"
                     >
-                      <div className="flex-shrink-0 p-2 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 rounded-lg border border-[#FB7D2D]/20">
-                        <FaHeart className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                      <div className="flex-shrink-0 p-2 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 rounded-lg border border-[#2E3D88]/20">
+                        <FaHeart className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                       </div>
                       <span className="text-lg truncate">المفضلة</span>
                     </button>
@@ -735,8 +735,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
                       dir="rtl"
                     >
-                      <div className="flex-shrink-0 p-2 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 rounded-lg border border-[#FB7D2D]/20">
-                        <FaMapMarkerAlt className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                      <div className="flex-shrink-0 p-2 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 rounded-lg border border-[#2E3D88]/20">
+                        <FaMapMarkerAlt className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                       </div>
                       <span className="text-lg truncate">عناويني</span>
                     </button>
@@ -751,8 +751,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
                       dir="rtl"
                     >
-                      <div className="flex-shrink-0 p-2 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 rounded-lg border border-[#FB7D2D]/20">
-                        <FaStar className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                      <div className="flex-shrink-0 p-2 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 rounded-lg border border-[#2E3D88]/20">
+                        <FaStar className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                       </div>
                       <span className="text-lg truncate">تقييماتي</span>
                     </button>
@@ -767,8 +767,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-gray-300 dark:hover:border-gray-600"
                       dir="rtl"
                     >
-                      <div className="flex-shrink-0 p-2 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 rounded-lg border border-[#FB7D2D]/20">
-                        <FaMap className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                      <div className="flex-shrink-0 p-2 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 rounded-lg border border-[#2E3D88]/20">
+                        <FaMap className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                       </div>
                       <span className="text-lg truncate">فروعنا</span>
                     </button>
@@ -781,11 +781,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                     >
                       <button
                         onClick={handleLogout}
-                        className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-[#FB7D2D] dark:hover:text-[#FB7D2D] transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-red-200 dark:hover:border-red-800"
+                        className="w-full text-right flex items-center gap-4 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-[#2E3D88] dark:hover:text-[#2E3D88] transition-all duration-200 font-medium rounded-xl border border-transparent hover:border-red-200 dark:hover:border-red-800"
                         dir="rtl"
                       >
-                        <div className="flex-shrink-0 p-2 bg-[#FB7D2D]/10 dark:bg-[#FB7D2D]/20 rounded-lg border border-[#FB7D2D]/20">
-                          <FaSignOutAlt className="text-[#FB7D2D] dark:text-[#FB7D2D] text-lg" />
+                        <div className="flex-shrink-0 p-2 bg-[#2E3D88]/10 dark:bg-[#2E3D88]/20 rounded-lg border border-[#2E3D88]/20">
+                          <FaSignOutAlt className="text-[#2E3D88] dark:text-[#2E3D88] text-lg" />
                         </div>
                         <span className="text-lg truncate">تسجيل الخروج</span>
                       </button>

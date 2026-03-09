@@ -178,7 +178,7 @@ export default function AuthPage() {
           icon: "error",
           title: "تعذر تسجيل الدخول",
           text: translateSocialError(error),
-          confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+          confirmButtonColor: "#2E3D88",
           showConfirmButton: false,
           timer: 2500,
           didClose: () => {
@@ -225,7 +225,7 @@ export default function AuthPage() {
               icon: "error",
               title: "خطأ في تسجيل الدخول",
               text: "حدث خطأ أثناء تسجيل الدخول باستخدام Google",
-              confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+              confirmButtonColor: "#2E3D88",
               showConfirmButton: false,
               timer: 2500,
               didClose: () => {
@@ -304,7 +304,7 @@ export default function AuthPage() {
           icon: "error",
           title: "خطأ في تسجيل الدخول",
           html: errorMessage,
-          confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+          confirmButtonColor: "#2E3D88",
           showConfirmButton: false,
           timer: 2500,
         });
@@ -333,7 +333,7 @@ export default function AuthPage() {
           icon: "error",
           title: "خطأ في الاتصال",
           text: "حدث خطأ أثناء التوجيه إلى Google. يرجى المحاولة مرة أخرى.",
-          confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+          confirmButtonColor: "#2E3D88",
           confirmButtonText: "حاول مرة أخرى",
         });
       }
@@ -383,7 +383,7 @@ export default function AuthPage() {
             icon: "success",
             title: "تم إنشاء الحساب",
             text: "تم إنشاء حسابك بنجاح! يرجى تأكيد بريدك الإلكتروني للمتابعة.",
-            confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+            confirmButtonColor: "#2E3D88",
             showConfirmButton: false,
             timer: 2500,
           });
@@ -401,7 +401,7 @@ export default function AuthPage() {
             icon: "error",
             title: "خطأ في التسجيل",
             html: errorMessage,
-            confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+            confirmButtonColor: "#2E3D88",
             showConfirmButton: false,
             timer: 2500,
           });
@@ -415,7 +415,7 @@ export default function AuthPage() {
           icon: "error",
           title: "خطأ في التسجيل",
           text: "حدث خطأ غير متوقع.",
-          confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+          confirmButtonColor: "#2E3D88",
           showConfirmButton: false,
           timer: 2500,
         });
@@ -459,7 +459,7 @@ export default function AuthPage() {
           icon: "info",
           title: "تم إرسال رمز إعادة التعيين",
           text: "لقد أرسلنا رمز إعادة التعيين إلى بريدك الإلكتروني. يرجى التحقق من صندوق الوارد لإعادة تعيين كلمة المرور.",
-          confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+          confirmButtonColor: "#2E3D88",
           showConfirmButton: false,
           timer: 2500,
         });
@@ -477,7 +477,7 @@ export default function AuthPage() {
           icon: "error",
           title: "خطأ",
           html: translatedMessage,
-          confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+          confirmButtonColor: "#2E3D88",
           showConfirmButton: false,
           timer: 2500,
         });
@@ -500,7 +500,7 @@ export default function AuthPage() {
           icon: "success",
           title: "تم إعادة إرسال البريد الإلكتروني",
           text: "تم إرسال بريد تأكيد جديد إلى صندوق الوارد الخاص بك.",
-          confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+          confirmButtonColor: "#2E3D88",
           showConfirmButton: false,
           timer: 2500,
         });
@@ -519,7 +519,7 @@ export default function AuthPage() {
           icon: "error",
           title: "فشل في إعادة الإرسال",
           text: translatedMessage,
-          confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+          confirmButtonColor: "#2E3D88",
           showConfirmButton: false,
           timer: 2500,
         });
@@ -566,7 +566,7 @@ export default function AuthPage() {
                 icon: "success",
                 title: "تم تأكيد البريد الإلكتروني",
                 text: "تم تأكيد بريدك الإلكتروني. يمكنك الآن تسجيل الدخول.",
-                confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+                confirmButtonColor: "#2E3D88",
                 showConfirmButton: false,
                 timer: 2500,
               });
@@ -620,7 +620,7 @@ export default function AuthPage() {
         ) : isProcessingGoogle ? (
           // Show only loading during Google processing
           <div className="flex flex-col items-center justify-center min-h-[400px]">
-            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FB7D2D] dark:border-[#FB7D2D] mb-6"></div>
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#2E3D88] dark:border-[#2E3D88] mb-6"></div>
             <p className="text-gray-700 dark:text-gray-300 text-lg">
               جاري تسجيل الدخول باستخدام Google...
             </p>

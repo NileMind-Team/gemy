@@ -49,8 +49,8 @@ export default function WelcomeAnimation({ userName, userImage }) {
             transition={{ duration: 0.6, type: "spring", damping: 15 }}
             className="max-w-md w-full mx-4 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700"
           >
-            {/* Header with solid color background */}
-            <div className="bg-[#FB7D2D] p-6 text-center">
+            {/* Header with gradient background */}
+            <div className="bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] p-6 text-center">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -98,7 +98,7 @@ export default function WelcomeAnimation({ userName, userImage }) {
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.7, type: "spring" }}
                   >
-                    <FaCheckCircle className="text-[#FB7D2D]" size={24} />
+                    <FaCheckCircle className="text-[#2E3D88]" size={24} />
                   </motion.div>
                 </div>
               </motion.div>
@@ -108,15 +108,15 @@ export default function WelcomeAnimation({ userName, userImage }) {
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ delay: 0.9, duration: 2 }}
-                className="h-1 bg-gradient-to-r from-[#FB7D2D] to-[#FB7D2D]/70 rounded-full"
+                className="h-1 bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] rounded-full"
               />
             </div>
           </motion.div>
 
           {/* Subtle background pattern */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-[#FB7D2D]/5 to-[#FB7D2D]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-[#FB7D2D]/10 to-[#FB7D2D]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-[#2E3D88]/5 to-[#4A5DB0]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-[#4A5DB0]/10 to-[#2E3D88]/5 rounded-full blur-3xl"></div>
           </div>
         </motion.div>
       )}

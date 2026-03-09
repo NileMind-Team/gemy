@@ -55,8 +55,6 @@ const Home = () => {
   const [pageSize, setPageSize] = useState(8);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [addingToCart, setAddingToCart] = useState(null);
-
-  // New states for addons modal
   const [showAddonsModal, setShowAddonsModal] = useState(false);
   const [selectedProductForAddons, setSelectedProductForAddons] =
     useState(null);
@@ -95,7 +93,7 @@ const Home = () => {
         confirmButtonText: options.confirmButtonText,
         showCancelButton: options.showCancelButton,
         cancelButtonText: options.cancelButtonText,
-        confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+        confirmButtonColor: "#2E3D88",
         cancelButtonColor: "#6B7280",
         ...options.swalOptions,
       });
@@ -139,7 +137,7 @@ const Home = () => {
         text: text,
         timer: options.timer || 2000,
         showConfirmButton: false,
-        confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+        confirmButtonColor: "#2E3D88",
         ...options.swalOptions,
       });
     }
@@ -395,7 +393,7 @@ const Home = () => {
         ingredients: [],
         description: product.description,
         isActive: product.isActive,
-        isAvailable: product.isAvailable !== false, // Assuming true if not specified
+        isAvailable: product.isAvailable !== false,
         calories: product.calories,
         preparationTimeStart: product.preparationTimeStart,
         preparationTimeEnd: product.preparationTimeEnd,
@@ -556,7 +554,7 @@ const Home = () => {
         text: "يجب تسجيل الدخول لإضافة المنتجات إلى المفضلة",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+        confirmButtonColor: "#2E3D88",
         cancelButtonColor: "#6B7280",
         confirmButtonText: "تسجيل الدخول",
         cancelButtonText: "إنشاء حساب جديد",
@@ -656,7 +654,7 @@ const Home = () => {
         text: "يجب تسجيل الدخول لإضافة المنتجات إلى السلة",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+        confirmButtonColor: "#2E3D88",
         cancelButtonColor: "#6B7280",
         confirmButtonText: "تسجيل الدخول",
         cancelButtonText: "إنشاء حساب جديد",
@@ -842,13 +840,14 @@ const Home = () => {
     }
   };
 
+  // Function to close addons modal
   const handleCloseAddonsModal = () => {
     setShowAddonsModal(false);
     setSelectedProductForAddons(null);
     setProductAddons([]);
     setSelectedAddons({});
-    setModalNotes("");
-    setShowModalNotes(false);
+    setModalNotes(""); // Reset notes
+    setShowModalNotes(false); // Reset notes modal state
     setModalLoading(false);
   };
 
@@ -886,7 +885,7 @@ const Home = () => {
       text: "لن تتمكن من التراجع عن هذا الإجراء!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+      confirmButtonColor: "#2E3D88",
       cancelButtonColor: "#6B7280",
       confirmButtonText: "نعم، احذفه!",
       cancelButtonText: "إلغاء",
@@ -1081,7 +1080,7 @@ const Home = () => {
         title: "لا يمكن حذف التصنيف",
         text: `يوجد ${productsInCategory.length} منتج في هذا التصنيف. يرجى إعادة تعيين أو حذف هذه المنتجات أولاً.`,
         icon: "warning",
-        confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+        confirmButtonColor: "#2E3D88",
         confirmButtonText: "حسناً",
       });
       return;
@@ -1092,7 +1091,7 @@ const Home = () => {
       text: "لن تتمكن من التراجع عن هذا الإجراء!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+      confirmButtonColor: "#2E3D88",
       cancelButtonColor: "#6B7280",
       confirmButtonText: "نعم، احذفه!",
       cancelButtonText: "إلغاء",
@@ -1241,7 +1240,7 @@ const Home = () => {
   const formatPriceDisplay = (product) => {
     if (product.isPriceBasedOnRequest) {
       return (
-        <div className="text-[#FB7D2D] font-bold text-lg sm:text-xl">
+        <div className="text-[#2E3D88] font-bold text-lg sm:text-xl">
           السعر حسب الطلب
         </div>
       );
@@ -1253,7 +1252,7 @@ const Home = () => {
           <div className="text-gray-400 dark:text-gray-500 text-sm line-through">
             {product.price} ج.م
           </div>
-          <div className="text-[#FB7D2D] font-bold text-lg sm:text-xl">
+          <div className="text-[#2E3D88] font-bold text-lg sm:text-xl">
             {product.finalPrice.toFixed(2)} ج.م
           </div>
         </>
@@ -1261,7 +1260,7 @@ const Home = () => {
     }
 
     return (
-      <div className="text-[#FB7D2D] font-bold text-lg sm:text-xl">
+      <div className="text-[#2E3D88] font-bold text-lg sm:text-xl">
         {product.price} ج.م
       </div>
     );
@@ -1270,7 +1269,7 @@ const Home = () => {
   const formatPriceDisplayMobile = (product) => {
     if (product.isPriceBasedOnRequest) {
       return (
-        <div className="text-[#FB7D2D] font-bold text-sm">السعر حسب الطلب</div>
+        <div className="text-[#2E3D88] font-bold text-sm">السعر حسب الطلب</div>
       );
     }
 
@@ -1280,7 +1279,7 @@ const Home = () => {
           <div className="text-gray-400 dark:text-gray-500 text-xs line-through">
             {product.price} ج.م
           </div>
-          <div className="text-[#FB7D2D] font-bold text-sm">
+          <div className="text-[#2E3D88] font-bold text-sm">
             {product.finalPrice.toFixed(2)} ج.م
           </div>
         </>
@@ -1288,7 +1287,7 @@ const Home = () => {
     }
 
     return (
-      <div className="text-[#FB7D2D] font-bold text-sm">
+      <div className="text-[#2E3D88] font-bold text-sm">
         {product.price} ج.م
       </div>
     );
@@ -1348,7 +1347,7 @@ const Home = () => {
         text: `يجب تسجيل الدخول للوصول إلى ${action}`,
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#FB7D2D", // Updated: Orange primary color
+        confirmButtonColor: "#2E3D88",
         cancelButtonColor: "#6B7280",
         confirmButtonText: "تسجيل الدخول",
         cancelButtonText: "إنشاء حساب جديد",
@@ -1467,8 +1466,8 @@ const Home = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FB7D2D]"></div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#2E3D88]"></div>
       </div>
     );
   }
@@ -1483,6 +1482,7 @@ const Home = () => {
         />
       </Helmet>
 
+      {/* Addons Modal - Responsive بدون اسكرول داخلي */}
       {showAddonsModal && (
         <>
           <div
@@ -1494,15 +1494,15 @@ const Home = () => {
             onClick={handleCloseAddonsModal}
           >
             <div
-              className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden w-full max-w-[95vw] sm:max-w-2xl mx-2 sm:mx-4 border border-gray-300"
+              className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden w-full max-w-[95vw] sm:max-w-2xl mx-2 sm:mx-4"
               onClick={(e) => e.stopPropagation()}
               dir="rtl"
               style={{ maxHeight: "calc(100vh - 2rem)" }}
             >
-              <div className="bg-[#FB7D2D] text-white p-4 sm:p-6 relative border-b border-white">
+              <div className="bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white p-4 sm:p-6 relative">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <div className="bg-white/20 p-2 sm:p-3 rounded-xl sm:rounded-2xl backdrop-blur-sm border border-white">
+                    <div className="bg-white/20 p-2 sm:p-3 rounded-xl sm:rounded-2xl backdrop-blur-sm">
                       <FaLayerGroup className="text-lg sm:text-2xl" />
                     </div>
                     <div>
@@ -1516,7 +1516,7 @@ const Home = () => {
                   </div>
                   <button
                     onClick={handleCloseAddonsModal}
-                    className="bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/30 flex-shrink-0 border border-white"
+                    className="bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/30 flex-shrink-0"
                   >
                     <FaTimes className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
                   </button>
@@ -1529,7 +1529,7 @@ const Home = () => {
               >
                 {modalLoading ? (
                   <div className="flex items-center justify-center py-8 sm:py-12">
-                    <div className="animate-spin rounded-full h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 border-t-4 border-b-4 border-[#FB7D2D]"></div>
+                    <div className="animate-spin rounded-full h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 border-t-4 border-b-4 border-[#2E3D88]"></div>
                   </div>
                 ) : productAddons.length === 0 ? (
                   <div className="text-center py-8 sm:py-12">
@@ -1548,7 +1548,7 @@ const Home = () => {
                         {productAddons.map((addon) => (
                           <div
                             key={addon.id}
-                            className="bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl p-3 sm:p-4 border-2 border-gray-200 dark:border-gray-600"
+                            className="bg-gray-50 dark:bg-gray-700/50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-gray-200 dark:border-gray-600"
                           >
                             <div className="flex items-center justify-between mb-2 sm:mb-3">
                               <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
@@ -1557,12 +1557,12 @@ const Home = () => {
                                 </h3>
                                 <div className="flex gap-1 sm:gap-2">
                                   {addon.isSelectionRequired && (
-                                    <span className="text-[10px] sm:text-xs bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-300 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full whitespace-nowrap border border-red-200">
+                                    <span className="text-[10px] sm:text-xs bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-300 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full whitespace-nowrap">
                                       مطلوب
                                     </span>
                                   )}
                                   {addon.canSelectMultipleOptions && (
-                                    <span className="text-[10px] sm:text-xs bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full whitespace-nowrap border border-blue-200">
+                                    <span className="text-[10px] sm:text-xs bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-300 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full whitespace-nowrap">
                                       متعدد
                                     </span>
                                   )}
@@ -1587,7 +1587,7 @@ const Home = () => {
                                       }
                                       className={`w-full p-2 sm:p-3 rounded-lg border-2 transition-all duration-200 flex items-center justify-between ${
                                         isSelected
-                                          ? "border-[#FB7D2D] bg-orange-50 dark:bg-orange-900/20"
+                                          ? "border-[#2E3D88] bg-blue-50 dark:bg-blue-900/20"
                                           : "border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-500"
                                       }`}
                                     >
@@ -1595,14 +1595,14 @@ const Home = () => {
                                         <span
                                           className={`font-medium text-xs sm:text-sm md:text-base truncate ${
                                             isSelected
-                                              ? "text-[#FB7D2D]"
+                                              ? "text-[#2E3D88]"
                                               : "text-gray-700 dark:text-gray-300"
                                           }`}
                                         >
                                           {option.name}
                                         </span>
                                         {isSelected && (
-                                          <FaCheck className="text-[#FB7D2D] flex-shrink-0 w-3 h-3 sm:w-4 sm:h-4" />
+                                          <FaCheck className="text-[#2E3D88] flex-shrink-0 w-3 h-3 sm:w-4 sm:h-4" />
                                         )}
                                       </div>
 
@@ -1624,7 +1624,7 @@ const Home = () => {
                           className={`w-full rounded-lg sm:rounded-xl p-3 sm:p-4 text-center transition-all duration-300 cursor-pointer ${
                             modalNotes
                               ? "bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 border-2 border-solid border-green-300 dark:border-green-600 hover:border-green-400 dark:hover:border-green-500"
-                              : "bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30 border-2 border-dashed border-[#FB7D2D] dark:border-orange-600 hover:border-solid hover:border-[#FB7D2D] dark:hover:border-orange-500"
+                              : "bg-gradient-to-r from-indigo-50 to-indigo-100 dark:from-indigo-900/30 dark:to-indigo-800/30 border-2 border-dashed border-indigo-300 dark:border-indigo-600 hover:border-solid hover:border-indigo-400 dark:hover:border-indigo-500"
                           }`}
                           dir="rtl"
                         >
@@ -1633,14 +1633,14 @@ const Home = () => {
                               className={`p-2 rounded-full ${
                                 modalNotes
                                   ? "bg-green-100 dark:bg-green-800/50"
-                                  : "bg-orange-100 dark:bg-orange-800/50"
+                                  : "bg-indigo-100 dark:bg-indigo-800/50"
                               }`}
                             >
                               <svg
                                 className={`w-5 h-5 sm:w-6 sm:h-6 ${
                                   modalNotes
                                     ? "text-green-600 dark:text-green-400"
-                                    : "text-[#FB7D2D]"
+                                    : "text-indigo-600 dark:text-indigo-400"
                                 }`}
                                 fill="none"
                                 stroke="currentColor"
@@ -1660,7 +1660,7 @@ const Home = () => {
                                 className={`font-semibold text-sm sm:text-base md:text-lg ${
                                   modalNotes
                                     ? "text-green-700 dark:text-green-300"
-                                    : "text-[#FB7D2D]"
+                                    : "text-indigo-700 dark:text-indigo-300"
                                 }`}
                               >
                                 {modalNotes
@@ -1671,7 +1671,7 @@ const Home = () => {
                                 className={`text-xs sm:text-sm mt-1 ${
                                   modalNotes
                                     ? "text-green-600/70 dark:text-green-400/70"
-                                    : "text-[#FB7D2D]/70"
+                                    : "text-indigo-600/70 dark:text-indigo-400/70"
                                 }`}
                               >
                                 {modalNotes
@@ -1690,7 +1690,7 @@ const Home = () => {
                     <div className="flex gap-2 sm:gap-3 mt-6 sm:mt-8">
                       <button
                         onClick={handleCloseAddonsModal}
-                        className="flex-1 py-2 sm:py-3 text-xs sm:text-sm md:text-base bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors border border-gray-300"
+                        className="flex-1 py-2 sm:py-3 text-xs sm:text-sm md:text-base bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                       >
                         إلغاء
                       </button>
@@ -1699,8 +1699,8 @@ const Home = () => {
                         disabled={addingToCart === selectedProductForAddons?.id}
                         className={`flex-1 py-2 sm:py-3 rounded-lg font-semibold flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base ${
                           addingToCart === selectedProductForAddons?.id
-                            ? "bg-gradient-to-r from-gray-500 to-gray-600 text-white cursor-wait border border-gray-600"
-                            : "bg-[#FB7D2D] text-white hover:bg-[#e66a1f] border border-[#FB7D2D]"
+                            ? "bg-gradient-to-r from-gray-500 to-gray-600 text-white cursor-wait"
+                            : "bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white hover:shadow-lg transition-all"
                         }`}
                       >
                         {addingToCart === selectedProductForAddons?.id ? (
@@ -1741,9 +1741,9 @@ const Home = () => {
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="bg-orange-100 dark:bg-orange-800/50 p-2 rounded-full">
+                  <div className="bg-indigo-100 dark:bg-indigo-800/50 p-2 rounded-full">
                     <svg
-                      className="w-5 h-5 text-[#FB7D2D]"
+                      className="w-5 h-5 text-indigo-600 dark:text-indigo-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -1778,7 +1778,7 @@ const Home = () => {
                   value={modalNotes}
                   onChange={(e) => setModalNotes(e.target.value)}
                   placeholder="اكتب تعليماتك هنا..."
-                  className="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#FB7D2D] focus:border-transparent resize-none"
+                  className="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#2E3D88] focus:border-transparent resize-none"
                   dir="rtl"
                   maxLength={500}
                   autoFocus
@@ -1832,7 +1832,7 @@ const Home = () => {
                       { timer: 1500 },
                     );
                   }}
-                  className="flex-1 py-3 bg-[#FB7D2D] text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                  className="flex-1 py-3 bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
                 >
                   <FaCheck className="text-sm" />
                   حفظ
@@ -1843,7 +1843,7 @@ const Home = () => {
         </>
       )}
 
-      <div className="min-h-screen bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 font-sans relative overflow-x-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 font-sans relative overflow-x-hidden">
         <div ref={topOfPageRef}></div>
 
         <HeroSwipper />
@@ -1852,10 +1852,10 @@ const Home = () => {
           ref={categoriesSectionRef}
           className="relative max-w-6xl mx-auto -mt-8 md:-mt-12 px-2 sm:px-4 z-20 w-full"
         >
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-3 md:p-4 relative w-full border border-gray-200">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-3 md:p-4 relative w-full">
             <button
               onClick={() => scrollCategories("left")}
-              className="absolute left-1 md:left-2 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full p-2 text-gray-600 dark:text-gray-300 hover:text-[#FB7D2D] z-10 shadow-lg border border-gray-300"
+              className="absolute left-1 md:left-2 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full p-2 text-gray-600 dark:text-gray-300 hover:text-[#2E3D88] z-10 shadow-lg"
             >
               <FaChevronLeft size={14} className="sm:w-4" />
             </button>
@@ -1886,10 +1886,10 @@ const Home = () => {
                       scrollToCategories();
                     }, 50);
                   }}
-                  className={`flex-shrink-0 flex items-center gap-2 px-3 md:px-4 py-2 md:py-3 rounded-xl font-semibold text-sm md:text-base transition-all duration-300 ${
+                  className={`flex-shrink-0 flex items-center gap-2 px-3 md:px-4 py-2 md:py-3 rounded-xl font-semibold text-sm md:text-base ${
                     selectedCategory === category.id
-                      ? "bg-[#FB7D2D] text-white shadow-lg border-2 border-[#FB7D2D]"
-                      : "bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 border-2 border-gray-300 dark:border-gray-600"
+                      ? "bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white shadow-lg"
+                      : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                   } ${
                     !category.isActive &&
                     category.id !== "all" &&
@@ -1903,7 +1903,7 @@ const Home = () => {
                   {category.id !== "all" &&
                     category.id !== "offers" &&
                     !category.isActive && (
-                      <span className="text-xs text-[#FB7D2D]">(معطل)</span>
+                      <span className="text-xs text-red-500">(معطل)</span>
                     )}
                 </button>
               ))}
@@ -1911,7 +1911,7 @@ const Home = () => {
 
             <button
               onClick={() => scrollCategories("right")}
-              className="absolute right-1 md:right-2 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full p-2 text-gray-600 dark:text-gray-300 hover:text-[#FB7D2D] z-10 shadow-lg border border-gray-300"
+              className="absolute right-1 md:right-2 top-1/2 transform -translate-y-1/2 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full p-2 text-gray-600 dark:text-gray-300 hover:text-[#2E3D88] z-10 shadow-lg"
             >
               <FaChevronRight size={14} className="sm:w-4" />
             </button>
@@ -1926,7 +1926,7 @@ const Home = () => {
             </div>
           ) : filteredProducts.length === 0 ? (
             <div className="max-w-7xl mx-auto px-2 sm:px-4 py-4 md:py-6 w-full">
-              <div className="text-center py-12 md:py-16 bg-white dark:bg-gray-800 rounded-2xl shadow-lg mx-2 border border-gray-200">
+              <div className="text-center py-12 md:py-16 bg-white dark:bg-gray-800 rounded-2xl shadow-lg mx-2">
                 <FaEye className="mx-auto text-4xl md:text-6xl text-gray-400 mb-4" />
                 <h3 className="text-xl md:text-2xl font-semibold text-gray-600 dark:text-gray-400 mb-2">
                   {selectedCategory === "offers"
@@ -1946,7 +1946,7 @@ const Home = () => {
                       scrollToCategories();
                     }, 50);
                   }}
-                  className="bg-[#FB7D2D] text-white px-6 py-3 rounded-xl font-semibold shadow-lg text-sm md:text-base hover:bg-[#e66a1f] transition-colors border border-[#FB7D2D]"
+                  className="bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white px-6 py-3 rounded-xl font-semibold shadow-lg text-sm md:text-base"
                 >
                   عرض جميع المنتجات
                 </button>
@@ -1961,7 +1961,7 @@ const Home = () => {
                 {filteredProducts.map((product) => (
                   <div
                     key={`${product.id}-${currentPage}`}
-                    className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer w-full relative min-h-[180px] hover:shadow-xl transition-shadow duration-300 ${
+                    className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700 cursor-pointer w-full relative min-h-[180px] ${
                       !isProductAvailableForCart(product) ? "opacity-70" : ""
                     } ${isProductCategoryDisabled(product) ? "opacity-80" : ""}`}
                     onClick={(e) => {
@@ -1976,7 +1976,7 @@ const Home = () => {
                   >
                     {product.itemOffer && product.itemOffer.isEnabled && (
                       <div className="absolute top-2 right-2 z-10">
-                        <div className="bg-[#FB7D2D] text-white px-3 py-1.5 rounded-xl shadow-2xl flex items-center gap-1.5 border border-white">
+                        <div className="bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white px-3 py-1.5 rounded-xl shadow-2xl flex items-center gap-1.5">
                           <FaFire className="text-white" size={12} />
                           <span className="text-xs font-bold whitespace-nowrap">
                             {formatOfferText(product.itemOffer)}
@@ -2004,10 +2004,10 @@ const Home = () => {
                               handleToggleActive(product.id, e);
                             }}
                             disabled={!canToggleProductActive(product)}
-                            className={`p-2 rounded-lg shadow-lg text-xs no-product-details border ${
+                            className={`p-2 rounded-lg shadow-lg text-xs no-product-details ${
                               isProductActive(product)
-                                ? "bg-yellow-500 text-white hover:bg-yellow-600 border-yellow-600"
-                                : "bg-green-500 text-white hover:bg-green-600 border-green-600"
+                                ? "bg-yellow-500 text-white hover:bg-yellow-600"
+                                : "bg-green-500 text-white hover:bg-green-600"
                             } ${
                               !canToggleProductActive(product)
                                 ? "opacity-50 cursor-not-allowed"
@@ -2027,13 +2027,13 @@ const Home = () => {
                           <>
                             <button
                               onClick={(e) => handleEditProduct(product, e)}
-                              className="bg-blue-500 text-white p-2 rounded-lg shadow-lg hover:bg-blue-600 no-product-details border border-blue-600"
+                              className="bg-blue-500 text-white p-2 rounded-lg shadow-lg hover:bg-blue-600 no-product-details"
                             >
                               <FaEdit size={12} />
                             </button>
                             <button
                               onClick={(e) => handleManageOffers(product, e)}
-                              className="bg-purple-500 text-white p-2 rounded-lg shadow-lg hover:bg-purple-600 no-product-details border border-purple-600"
+                              className="bg-purple-500 text-white p-2 rounded-lg shadow-lg hover:bg-purple-600 no-product-details"
                             >
                               <FaPercent size={12} />
                             </button>
@@ -2041,7 +2041,7 @@ const Home = () => {
                               onClick={(e) =>
                                 handleDeleteProduct(product.id, e)
                               }
-                              className="bg-red-500 text-white p-2 rounded-lg shadow-lg hover:bg-red-600 no-product-details border border-red-600"
+                              className="bg-red-500 text-white p-2 rounded-lg shadow-lg hover:bg-red-600 no-product-details"
                             >
                               <FaTrash size={12} />
                             </button>
@@ -2054,7 +2054,7 @@ const Home = () => {
                       <div className="p-3">
                         <div className="flex">
                           <div className="w-28 flex-shrink-0 ml-3">
-                            <div className="relative h-32 w-full overflow-hidden rounded-xl border border-gray-200">
+                            <div className="relative h-32 w-full overflow-hidden rounded-xl">
                               <img
                                 src={product.image}
                                 alt={product.name}
@@ -2066,7 +2066,7 @@ const Home = () => {
 
                           <div className="flex-1 min-w-0">
                             <h3
-                              className="font-bold text-sm text-gray-800 dark:text-gray-200 hover:text-[#FB7D2D] line-clamp-1 mb-2"
+                              className="font-bold text-sm text-gray-800 dark:text-gray-200 hover:text-[#2E3D88] line-clamp-1 mb-2"
                               dir={isArabic(product.name) ? "rtl" : "ltr"}
                             >
                               {product.name}
@@ -2104,7 +2104,7 @@ const Home = () => {
                               addingToCart === product.id
                                 ? "bg-gradient-to-r from-gray-500 to-gray-600 text-white cursor-wait"
                                 : isProductAvailableForCart(product)
-                                  ? "bg-[#FB7D2D] text-white hover:bg-[#e66a1f]"
+                                  ? "bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white"
                                   : "bg-gray-400 text-gray-200 cursor-not-allowed"
                             }`}
                           >
@@ -2130,7 +2130,7 @@ const Home = () => {
                               e.stopPropagation();
                               handleProductDetails(product);
                             }}
-                            className="flex-1 py-2.5 rounded-xl font-semibold flex items-center justify-center gap-2 text-xs no-product-details bg-gray-800 text-white hover:bg-gray-900 border border-gray-800"
+                            className="flex-1 py-2.5 rounded-xl font-semibold flex items-center justify-center gap-2 text-xs no-product-details bg-gradient-to-r from-gray-600 to-gray-800 text-white"
                           >
                             <FaEye className="w-3.5 h-3.5" />
                             <span>عرض التفاصيل</span>
@@ -2138,10 +2138,10 @@ const Home = () => {
 
                           <button
                             onClick={(e) => handleToggleFavorite(product, e)}
-                            className={`p-2.5 rounded-xl font-semibold flex items-center justify-center text-xs no-product-details border ${
+                            className={`p-2.5 rounded-xl font-semibold flex items-center justify-center text-xs no-product-details ${
                               isProductInFavorites(product.id)
-                                ? "text-[#FB7D2D] bg-orange-50 dark:bg-orange-900/20 hover:bg-orange-100 dark:hover:bg-orange-900/30 border-[#FB7D2D]"
-                                : "text-gray-400 bg-gray-50 dark:bg-gray-700 hover:text-[#FB7D2D] hover:bg-gray-100 dark:hover:bg-gray-600 border-gray-300"
+                                ? "text-red-500 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/30"
+                                : "text-gray-400 bg-gray-50 dark:bg-gray-700 hover:text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
                             }`}
                           >
                             {isProductInFavorites(product.id) ? (
@@ -2166,7 +2166,7 @@ const Home = () => {
 
                       <div className="p-3 sm:p-4">
                         <h3
-                          className="font-bold text-base sm:text-lg text-gray-800 dark:text-gray-200 mb-2 hover:text-[#FB7D2D] line-clamp-1"
+                          className="font-bold text-base sm:text-lg text-gray-800 dark:text-gray-200 mb-2 hover:text-[#2E3D88] line-clamp-1"
                           dir={isArabic(product.name) ? "rtl" : "ltr"}
                         >
                           {product.name}
@@ -2184,10 +2184,10 @@ const Home = () => {
                           </div>
                           <button
                             onClick={(e) => handleToggleFavorite(product, e)}
-                            className={`p-2 rounded-full no-product-details border ${
+                            className={`p-2 rounded-full no-product-details ${
                               isProductInFavorites(product.id)
-                                ? "text-[#FB7D2D] bg-orange-50 dark:bg-orange-900/20 border-[#FB7D2D]"
-                                : "text-gray-400 bg-gray-50 dark:bg-gray-700 hover:text-[#FB7D2D] border-gray-300"
+                                ? "text-red-500 bg-red-50 dark:bg-red-900/20"
+                                : "text-gray-400 bg-gray-50 dark:bg-gray-700 hover:text-red-500"
                             }`}
                           >
                             {isProductInFavorites(product.id) ? (
@@ -2213,7 +2213,7 @@ const Home = () => {
                               addingToCart === product.id
                                 ? "bg-gradient-to-r from-gray-500 to-gray-600 text-white cursor-wait"
                                 : isProductAvailableForCart(product)
-                                  ? "bg-[#FB7D2D] text-white hover:bg-[#e66a1f]"
+                                  ? "bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white"
                                   : "bg-gray-400 text-gray-200 cursor-not-allowed"
                             }`}
                           >
@@ -2241,7 +2241,7 @@ const Home = () => {
                               e.stopPropagation();
                               handleProductDetails(product);
                             }}
-                            className="flex-1 py-2 sm:py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm no-product-details bg-gray-800 text-white hover:bg-gray-900 border border-gray-800"
+                            className="flex-1 py-2 sm:py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm no-product-details bg-gradient-to-r from-gray-600 to-gray-800 text-white"
                           >
                             <FaEye className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                             <span className="xs:hidden">عرض التفاصيل</span>
@@ -2259,10 +2259,10 @@ const Home = () => {
                     <button
                       onClick={handlePrevPage}
                       disabled={currentPage === 1}
-                      className={`p-2 sm:p-3 rounded-xl border ${
+                      className={`p-2 sm:p-3 rounded-xl ${
                         currentPage === 1
-                          ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed border-gray-300"
-                          : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-300 dark:border-gray-600"
+                          ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed"
+                          : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600"
                       }`}
                     >
                       <FaChevronRight className="text-sm sm:text-base" />
@@ -2278,10 +2278,10 @@ const Home = () => {
                           ) : (
                             <button
                               onClick={() => handlePageChange(pageNum)}
-                              className={`px-3 sm:px-4 py-1 sm:py-2 rounded-xl font-semibold border ${
+                              className={`px-3 sm:px-4 py-1 sm:py-2 rounded-xl font-semibold ${
                                 currentPage === pageNum
-                                  ? "bg-[#FB7D2D] text-white shadow-lg border-[#FB7D2D]"
-                                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-300 dark:border-gray-600"
+                                  ? "bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white shadow-lg"
+                                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600"
                               }`}
                             >
                               {pageNum}
@@ -2294,10 +2294,10 @@ const Home = () => {
                     <button
                       onClick={handleNextPage}
                       disabled={currentPage === totalPages}
-                      className={`p-2 sm:p-3 rounded-xl border ${
+                      className={`p-2 sm:p-3 rounded-xl ${
                         currentPage === totalPages
-                          ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed border-gray-300"
-                          : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-300 dark:border-gray-600"
+                          ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed"
+                          : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600"
                       }`}
                     >
                       <FaChevronLeft className="text-sm sm:text-base" />
@@ -2311,7 +2311,7 @@ const Home = () => {
 
         {/* Cart Button */}
         <div
-          className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#FB7D2D] text-white rounded-full p-3 sm:p-4 shadow-2xl z-40 cursor-pointer hover:scale-110 no-product-details border-2 border-white ${
+          className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white rounded-full p-3 sm:p-4 shadow-2xl z-40 cursor-pointer hover:scale-110 no-product-details ${
             cartItemsCount === 0 ? "opacity-70" : ""
           }`}
           onClick={handleNavigateToCart}
@@ -2319,7 +2319,7 @@ const Home = () => {
           <div className="relative">
             <FaShoppingCart className="w-4 h-4 sm:w-6 sm:h-6" />
             {cartItemsCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-white text-[#FB7D2D] rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center text-xs font-bold border border-[#FB7D2D]">
+              <span className="absolute -top-2 -right-2 bg-white text-[#2E3D88] rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center text-xs font-bold">
                 {cartItemsCount}
               </span>
             )}
@@ -2331,20 +2331,20 @@ const Home = () => {
           {/* Favorites Button - Always Visible */}
           <button
             onClick={handleNavigateToFavorites}
-            className="relative bg-[#FB7D2D] text-white rounded-full p-3 sm:p-4 shadow-2xl hover:scale-110 no-product-details border-2 border-white"
+            className="relative bg-gradient-to-r from-[#FF3366] to-[#FF6B9D] text-white rounded-full p-3 sm:p-4 shadow-2xl hover:scale-110 no-product-details"
           >
             <div className="relative flex items-center justify-center">
               <FaHeart className="w-4 h-4 sm:w-6 sm:h-6" />
 
               {favorites.length > 0 && (
-                <span className="absolute -top-2 -right-2 bg-white text-[#FB7D2D] rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center text-xs font-bold shadow-md border border-[#FB7D2D]">
+                <span className="absolute -top-2 -right-2 bg-white text-[#FF3366] rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center text-xs font-bold shadow-md">
                   {favorites.length}
                 </span>
               )}
             </div>
 
             <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 opacity-0 hover:opacity-100 pointer-events-none">
-              <div className="bg-gray-900 text-white text-xs font-semibold px-3 py-2 rounded-lg shadow-lg whitespace-nowrap border border-gray-700">
+              <div className="bg-gray-900 text-white text-xs font-semibold px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
                 منتجاتي المفضلة
                 <div className="absolute left-full top-1/2 transform -translate-y-1/2">
                   <div className="w-2 h-2 bg-gray-900 rotate-45"></div>
@@ -2358,12 +2358,12 @@ const Home = () => {
             <>
               <button
                 onClick={handleAddNewProduct}
-                className="relative bg-gray-800 text-white rounded-full p-3 sm:p-4 shadow-2xl hover:scale-110 no-product-details border-2 border-white"
+                className="relative bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-full p-3 sm:p-4 shadow-2xl hover:scale-110 no-product-details"
               >
                 <FaPlus className="w-4 h-4 sm:w-6 sm:h-6" />
 
                 <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 opacity-0 hover:opacity-100 pointer-events-none">
-                  <div className="bg-gray-900 text-white text-xs font-semibold px-3 py-2 rounded-lg shadow-lg whitespace-nowrap border border-gray-700">
+                  <div className="bg-gray-900 text-white text-xs font-semibold px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
                     إضافة منتج جديد
                     <div className="absolute left-full top-1/2 transform -translate-y-1/2">
                       <div className="w-2 h-2 bg-gray-900 rotate-45"></div>
@@ -2374,12 +2374,12 @@ const Home = () => {
 
               <button
                 onClick={handleOpenCategoriesManager}
-                className="relative bg-gray-800 text-white rounded-full p-3 sm:p-4 shadow-2xl hover:scale-110 no-product-details border-2 border-white"
+                className="relative bg-gradient-to-r from-purple-500 to-violet-600 text-white rounded-full p-3 sm:p-4 shadow-2xl hover:scale-110 no-product-details"
               >
                 <FaList className="w-4 h-4 sm:w-6 sm:h-6" />
 
                 <div className="absolute right-full mr-3 top-1/2 transform -translate-y-1/2 opacity-0 hover:opacity-100 pointer-events-none">
-                  <div className="bg-gray-900 text-white text-xs font-semibold px-3 py-2 rounded-lg shadow-lg whitespace-nowrap border border-gray-700">
+                  <div className="bg-gray-900 text-white text-xs font-semibold px-3 py-2 rounded-lg shadow-lg whitespace-nowrap">
                     إدارة التصنيفات
                     <div className="absolute left-full top-1/2 transform -translate-y-1/2">
                       <div className="w-2 h-2 bg-gray-900 rotate-45"></div>
@@ -2404,14 +2404,14 @@ const Home = () => {
               onClick={handleCloseCategoriesManager}
             >
               <div
-                className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden w-full max-w-4xl mx-auto my-auto max-h-[90vh] overflow-y-auto border border-gray-300"
+                className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden w-full max-w-4xl mx-auto my-auto max-h-[90vh] overflow-y-auto"
                 onClick={(e) => e.stopPropagation()}
                 dir="rtl"
               >
-                <div className="bg-[#FB7D2D] text-white p-4 sm:p-6 relative border-b border-white">
+                <div className="bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white p-4 sm:p-6 relative">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="bg-white/20 p-2 sm:p-3 rounded-2xl backdrop-blur-sm border border-white">
+                      <div className="bg-white/20 p-2 sm:p-3 rounded-2xl backdrop-blur-sm">
                         <FaLayerGroup className="text-xl sm:text-2xl" />
                       </div>
                       <div>
@@ -2425,7 +2425,7 @@ const Home = () => {
                     </div>
                     <button
                       onClick={handleCloseCategoriesManager}
-                      className="bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/30 no-product-details border border-white"
+                      className="bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/30 no-product-details"
                     >
                       <FaTimes size={16} className="sm:w-5" />
                     </button>
@@ -2433,10 +2433,10 @@ const Home = () => {
                 </div>
 
                 <div className="p-4 sm:p-6">
-                  <div className="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 shadow-lg">
+                  <div className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-700 dark:to-gray-800 border border-gray-200 dark:border-gray-600 rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 shadow-lg">
                     <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                      <div className="bg-[#FB7D2D]/10 p-2 rounded-xl border border-[#FB7D2D]/20">
-                        <FaPlus className="text-[#FB7D2D] text-base sm:text-lg" />
+                      <div className="bg-[#2E3D88]/10 p-2 rounded-xl">
+                        <FaPlus className="text-[#2E3D88] text-base sm:text-lg" />
                       </div>
                       <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-200">
                         إضافة تصنيف جديد
@@ -2460,7 +2460,7 @@ const Home = () => {
                               })
                             }
                             placeholder="أدخل اسم التصنيف الجديد..."
-                            className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 rounded-xl border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-600 dark:text-white focus:ring-2 focus:ring-[#FB7D2D] focus:border-[#FB7D2D] outline-none text-right text-base font-medium"
+                            className="w-full pl-10 sm:pl-12 pr-3 sm:pr-4 py-3 sm:py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 dark:bg-gray-600 dark:text-white focus:ring-2 focus:ring-[#2E3D88] focus:border-[#2E3D88] outline-none text-right text-base font-medium"
                           />
                         </div>
                       </div>
@@ -2484,14 +2484,14 @@ const Home = () => {
                                 className="sr-only"
                               />
                               <div
-                                className={`block w-14 sm:w-16 h-7 sm:h-8 rounded-full border-2 ${
+                                className={`block w-14 sm:w-16 h-7 sm:h-8 rounded-full ${
                                   newCategory.isActive
-                                    ? "bg-green-500 border-green-600"
-                                    : "bg-gray-400 border-gray-500"
+                                    ? "bg-green-500"
+                                    : "bg-gray-400"
                                 }`}
                               ></div>
                               <div
-                                className={`absolute right-1 top-1 bg-white w-5 sm:w-6 h-5 sm:h-6 rounded-full shadow-lg border border-gray-300 ${
+                                className={`absolute right-1 top-1 bg-white w-5 sm:w-6 h-5 sm:h-6 rounded-full shadow-lg ${
                                   newCategory.isActive
                                     ? "transform translate-x-[-1.5rem] sm:translate-x-[-1.75rem]"
                                     : ""
@@ -2515,7 +2515,7 @@ const Home = () => {
                     <div className="flex justify-start mt-4 sm:mt-6">
                       <button
                         onClick={handleAddCategory}
-                        className="bg-[#FB7D2D] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold shadow-lg flex items-center gap-2 sm:gap-3 text-sm sm:text-base no-product-details hover:bg-[#e66a1f] border border-[#FB7D2D]"
+                        className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold shadow-lg flex items-center gap-2 sm:gap-3 text-sm sm:text-base no-product-details"
                       >
                         <FaPlus />
                         إضافة تصنيف جديد
@@ -2525,8 +2525,8 @@ const Home = () => {
 
                   <div>
                     <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                      <div className="bg-[#FB7D2D]/10 p-2 rounded-xl border border-[#FB7D2D]/20">
-                        <FaList className="text-[#FB7D2D] text-base sm:text-lg" />
+                      <div className="bg-[#4A5DB0]/10 p-2 rounded-xl">
+                        <FaList className="text-[#4A5DB0] text-base sm:text-lg" />
                       </div>
                       <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-200">
                         التصنيفات الحالية ({categories.length - 2})
@@ -2540,7 +2540,7 @@ const Home = () => {
                           className={`bg-white dark:bg-gray-700 border-2 ${
                             category.id === "all" || category.id === "offers"
                               ? "border-gray-300 dark:border-gray-600"
-                              : "border-gray-200 dark:border-gray-600 hover:border-[#FB7D2D]/50 dark:hover:border-[#FB7D2D]/50"
+                              : "border-gray-200 dark:border-gray-600 hover:border-[#2E3D88]/30 dark:hover:border-[#2E3D88]/30"
                           } rounded-2xl p-4 sm:p-6 hover:shadow-lg`}
                         >
                           {editingCategory &&
@@ -2560,7 +2560,7 @@ const Home = () => {
                                         name: e.target.value,
                                       })
                                     }
-                                    className="w-full px-3 sm:px-4 py-3 sm:py-4 rounded-xl border-2 border-gray-300 dark:border-gray-600 dark:bg-gray-600 dark:text-white focus:ring-2 focus:ring-[#FB7D2D] focus:border-[#FB7D2D] outline-none text-right text-base font-medium"
+                                    className="w-full px-3 sm:px-4 py-3 sm:py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 dark:bg-gray-600 dark:text-white focus:ring-2 focus:ring-[#2E3D88] focus:border-[#2E3D88] outline-none text-right text-base font-medium"
                                     dir="rtl"
                                   />
                                 </div>
@@ -2584,14 +2584,14 @@ const Home = () => {
                                           className="sr-only"
                                         />
                                         <div
-                                          className={`block w-14 sm:w-16 h-7 sm:h-8 rounded-full border-2 ${
+                                          className={`block w-14 sm:w-16 h-7 sm:h-8 rounded-full ${
                                             editingCategory.isActive
-                                              ? "bg-green-500 border-green-600"
-                                              : "bg-gray-400 border-gray-500"
+                                              ? "bg-green-500"
+                                              : "bg-gray-400"
                                           }`}
                                         ></div>
                                         <div
-                                          className={`absolute right-1 top-1 bg-white w-5 sm:w-6 h-5 sm:h-6 rounded-full shadow-lg border border-gray-300 ${
+                                          className={`absolute right-1 top-1 bg-white w-5 sm:w-6 h-5 sm:h-6 rounded-full shadow-lg ${
                                             editingCategory.isActive
                                               ? "transform translate-x-[-1.5rem] sm:translate-x-[-1.75rem]"
                                               : ""
@@ -2623,7 +2623,7 @@ const Home = () => {
                                 </button>
                                 <button
                                   onClick={handleSaveCategory}
-                                  className="bg-[#FB7D2D] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold shadow-lg flex items-center gap-2 text-sm sm:text-base no-product-details hover:bg-[#e66a1f] border border-[#FB7D2D]"
+                                  className="bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold shadow-lg flex items-center gap-2 text-sm sm:text-base no-product-details"
                                 >
                                   <FaSave />
                                   حفظ التغييرات
@@ -2634,14 +2634,14 @@ const Home = () => {
                             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0">
                               <div className="flex items-center gap-3 sm:gap-4">
                                 <div
-                                  className={`p-2 sm:p-3 rounded-xl border ${
+                                  className={`p-2 sm:p-3 rounded-xl ${
                                     category.id === "all"
-                                      ? "bg-gray-100 dark:bg-gray-600 border-gray-300"
+                                      ? "bg-gray-100 dark:bg-gray-600"
                                       : category.id === "offers"
-                                        ? "bg-orange-100 dark:bg-orange-900/30 border-orange-300"
+                                        ? "bg-orange-100 dark:bg-orange-900/30"
                                         : category.isActive
-                                          ? "bg-green-100 dark:bg-green-900/30 border-green-300"
-                                          : "bg-red-100 dark:bg-red-900/30 border-red-300"
+                                          ? "bg-green-100 dark:bg-green-900/30"
+                                          : "bg-red-100 dark:bg-red-900/30"
                                   }`}
                                 >
                                   {category.id === "offers" ? (
@@ -2678,10 +2678,10 @@ const Home = () => {
                                       category.id !== "all" && (
                                         <>
                                           <span
-                                            className={`px-2 py-1 rounded-full font-medium border ${
+                                            className={`px-2 py-1 rounded-full font-medium ${
                                               category.isActive
-                                                ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-300"
-                                                : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border-red-300"
+                                                ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400"
+                                                : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"
                                             }`}
                                           >
                                             {category.isActive
@@ -2716,10 +2716,10 @@ const Home = () => {
                                             e,
                                           )
                                         }
-                                        className={`p-2 sm:p-3 rounded-xl shadow-md no-product-details border ${
+                                        className={`p-2 sm:p-3 rounded-xl shadow-md no-product-details ${
                                           category.isActive
-                                            ? "bg-yellow-500 hover:bg-yellow-600 text-white border-yellow-600"
-                                            : "bg-green-500 hover:bg-green-600 text-white border-green-600"
+                                            ? "bg-yellow-500 hover:bg-yellow-600 text-white"
+                                            : "bg-green-500 hover:bg-green-600 text-white"
                                         }`}
                                         title={
                                           category.isActive
@@ -2743,7 +2743,7 @@ const Home = () => {
                                         onClick={() =>
                                           handleEditCategory(category)
                                         }
-                                        className="bg-blue-500 text-white p-2 sm:p-3 rounded-xl hover:bg-blue-600 shadow-md no-product-details border border-blue-600"
+                                        className="bg-blue-500 text-white p-2 sm:p-3 rounded-xl hover:bg-blue-600 shadow-md no-product-details"
                                         title="تعديل التصنيف"
                                       >
                                         <FaEdit
@@ -2755,7 +2755,7 @@ const Home = () => {
                                         onClick={() =>
                                           handleDeleteCategory(category.id)
                                         }
-                                        className="bg-red-500 text-white p-2 sm:p-3 rounded-xl hover:bg-red-600 shadow-md no-product-details border border-red-600"
+                                        className="bg-red-500 text-white p-2 sm:p-3 rounded-xl hover:bg-red-600 shadow-md no-product-details"
                                         title="حذف التصنيف"
                                       >
                                         <FaTrash

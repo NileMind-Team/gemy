@@ -49,7 +49,7 @@ const BranchCard = ({
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
         <div className="flex items-start gap-3 sm:gap-4 flex-1 min-w-0">
           <div className="flex-shrink-0">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-[#FB7D2D] text-white flex items-center justify-center font-semibold text-base sm:text-lg md:text-xl border-2 border-white">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white flex items-center justify-center font-semibold text-base sm:text-lg md:text-xl border-2 border-white">
               <FaBuilding className="text-sm sm:text-base md:text-lg" />
             </div>
           </div>
@@ -83,28 +83,28 @@ const BranchCard = ({
 
             <div className="space-y-1 sm:space-y-2 text-gray-700 dark:text-gray-300 text-sm sm:text-base">
               <div className="flex items-center gap-2">
-                <FaMapMarkerAlt className="text-[#FB7D2D] flex-shrink-0 text-xs sm:text-sm border border-[#FB7D2D] rounded p-0.5" />
+                <FaMapMarkerAlt className="text-[#2E3D88] flex-shrink-0 text-xs sm:text-sm border border-[#2E3D88] rounded p-0.5" />
                 <span className="truncate">{branch.address}</span>
               </div>
               <div className="flex items-center gap-2">
-                <FaEnvelope className="text-[#FB7D2D] flex-shrink-0 text-xs sm:text-sm border border-[#FB7D2D] rounded p-0.5" />
+                <FaEnvelope className="text-[#2E3D88] flex-shrink-0 text-xs sm:text-sm border border-[#2E3D88] rounded p-0.5" />
                 <span className="truncate">{branch.email}</span>
               </div>
               <div className="flex items-center gap-2">
-                <FaClock className="text-[#FB7D2D] flex-shrink-0 text-xs sm:text-sm border border-[#FB7D2D] rounded p-0.5" />
+                <FaClock className="text-[#2E3D88] flex-shrink-0 text-xs sm:text-sm border border-[#2E3D88] rounded p-0.5" />
                 <span>
                   {displayOpeningTime} - {displayClosingTime}
                 </span>
               </div>
               {branch.city && (
                 <div className="flex items-center gap-2">
-                  <FaCity className="text-[#FB7D2D] flex-shrink-0 text-xs sm:text-sm border border-[#FB7D2D] rounded p-0.5" />
+                  <FaCity className="text-[#2E3D88] flex-shrink-0 text-xs sm:text-sm border border-[#2E3D88] rounded p-0.5" />
                   <span>{branch.city.name}</span>
                 </div>
               )}
               {branch.phoneNumbers && branch.phoneNumbers.length > 0 && (
                 <div className="flex flex-wrap items-center gap-2 mt-2">
-                  <FaPhone className="text-[#FB7D2D] flex-shrink-0 text-xs sm:text-sm border border-[#FB7D2D] rounded p-0.5" />
+                  <FaPhone className="text-[#2E3D88] flex-shrink-0 text-xs sm:text-sm border border-[#2E3D88] rounded p-0.5" />
                   {branch.phoneNumbers.map((phone, idx) => (
                     <div
                       key={idx}

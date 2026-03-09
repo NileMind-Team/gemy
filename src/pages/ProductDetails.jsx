@@ -84,7 +84,7 @@ const ProductDetails = () => {
         icon: type,
         title: title,
         text: text,
-        confirmButtonColor: options.confirmButtonColor || "#FB7D2D", // Updated: Orange color
+        confirmButtonColor: options.confirmButtonColor || "#2E3D88", // Updated: Blue primary color
         timer: options.timer || 2500,
         showConfirmButton:
           options.showConfirmButton !== undefined
@@ -155,7 +155,7 @@ const ProductDetails = () => {
         icon: type,
         title: title,
         text: text,
-        confirmButtonColor: options.confirmButtonColor || "#FB7D2D", // Updated: Orange color
+        confirmButtonColor: options.confirmButtonColor || "#2E3D88", // Updated: Blue primary color
         timer: options.timer || 2500,
         showConfirmButton:
           options.showConfirmButton !== undefined
@@ -430,7 +430,7 @@ const ProductDetails = () => {
   const formatPriceDisplay = (product) => {
     if (product.isPriceBasedOnRequest) {
       return (
-        <div className="text-[#FB7D2D] font-bold text-2xl md:text-3xl">
+        <div className="text-[#2E3D88] font-bold text-2xl md:text-3xl">
           السعر حسب الطلب
         </div>
       );
@@ -442,7 +442,7 @@ const ProductDetails = () => {
           <div className="text-gray-400 dark:text-gray-500 text-base md:text-lg line-through">
             {toArabicNumbers(product.price)} ج.م
           </div>
-          <div className="text-[#FB7D2D] font-bold text-2xl md:text-3xl">
+          <div className="text-[#2E3D88] font-bold text-2xl md:text-3xl">
             {toArabicNumbers(product.finalPrice.toFixed(2))} ج.م
           </div>
         </>
@@ -450,7 +450,7 @@ const ProductDetails = () => {
     }
 
     return (
-      <div className="text-[#FB7D2D] font-bold text-2xl md:text-3xl">
+      <div className="text-[#2E3D88] font-bold text-2xl md:text-3xl">
         {toArabicNumbers(product.price)} ج.م
       </div>
     );
@@ -548,7 +548,7 @@ const ProductDetails = () => {
         text: "يجب تسجيل الدخول لإضافة المنتجات إلى السلة",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#FB7D2D", // Updated: Orange color
+        confirmButtonColor: "#2E3D88", // Updated: Blue primary color
         cancelButtonColor: "#6B7280",
         confirmButtonText: "تسجيل الدخول",
         cancelButtonText: "إنشاء حساب جديد",
@@ -642,7 +642,7 @@ const ProductDetails = () => {
       text: "لن تتمكن من التراجع عن هذا الإجراء!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#FB7D2D", // Updated: Orange color
+      confirmButtonColor: "#2E3D88", // Updated: Blue primary color
       cancelButtonColor: "#6B7280",
       confirmButtonText: "نعم، احذفه!",
       cancelButtonText: "إلغاء",
@@ -801,7 +801,7 @@ const ProductDetails = () => {
       text: "لن تتمكن من التراجع عن هذا الإجراء!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#FB7D2D", // Updated: Orange color
+      confirmButtonColor: "#2E3D88", // Updated: Blue primary color
       cancelButtonColor: "#6B7280",
       confirmButtonText: "نعم، احذفه!",
       cancelButtonText: "إلغاء",
@@ -1061,22 +1061,22 @@ const ProductDetails = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FB7D2D]"></div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#2E3D88]"></div>
       </div>
     );
   }
 
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
             المنتج غير موجود
           </h2>
           <button
             onClick={() => navigate("/")}
-            className="bg-[#FB7D2D] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all border border-[#FB7D2D] hover:bg-[#e66a1f]"
+            className="bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all border border-[#2E3D88]"
           >
             العودة للرئيسية
           </button>
@@ -1094,7 +1094,7 @@ const ProductDetails = () => {
           content="نوفر لك كل ما تحتاجه من أدوية ومنتجات طبية وعناية شخصية بجودة عالية وخدمة مميزة."
         />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 transition-colors duration-300">
+      <div className="min-h-screen bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 transition-colors duration-300">
         {/* Option Modal */}
         {showOptionModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -1128,7 +1128,7 @@ const ProductDetails = () => {
                     name="name"
                     value={optionForm.name}
                     onChange={handleOptionFormChange}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#FB7D2D] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#2E3D88] focus:border-transparent"
                     placeholder="أدخل اسم الخيار"
                     autoFocus
                   />
@@ -1145,7 +1145,7 @@ const ProductDetails = () => {
                     onChange={handleOptionFormChange}
                     min="0"
                     step="0.01"
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#FB7D2D] focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#2E3D88] focus:border-transparent"
                     placeholder="أدخل السعر"
                   />
                 </div>
@@ -1160,7 +1160,7 @@ const ProductDetails = () => {
                 </button>
                 <button
                   onClick={handleSaveOption}
-                  className="flex-1 py-3 bg-[#FB7D2D] text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 border border-[#FB7D2D] hover:bg-[#e66a1f]"
+                  className="flex-1 py-3 bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 border border-[#2E3D88]"
                 >
                   <FaSave />
                   {editingOption ? "تحديث" : "حفظ"}
@@ -1202,7 +1202,7 @@ const ProductDetails = () => {
                     <div
                       className={`w-full px-4 py-3 border rounded-lg cursor-pointer flex items-center justify-between ${
                         showAddonTypeDropdown
-                          ? "border-[#FB7D2D] ring-2 ring-[#FB7D2D]/20"
+                          ? "border-[#2E3D88] ring-2 ring-[#2E3D88]/20"
                           : "border-gray-300 dark:border-gray-600"
                       } bg-white dark:bg-gray-700`}
                       onClick={() =>
@@ -1277,7 +1277,7 @@ const ProductDetails = () => {
                           name="name"
                           value={addonTypeForm.name}
                           onChange={handleAddonTypeFormChange}
-                          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#FB7D2D] focus:border-transparent"
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#2E3D88] focus:border-transparent"
                           placeholder="أدخل اسم نوع الإضافة الجديد"
                         />
                       </div>
@@ -1290,7 +1290,7 @@ const ProductDetails = () => {
                             name="canSelectMultipleOptions"
                             checked={addonTypeForm.canSelectMultipleOptions}
                             onChange={handleAddonTypeFormChange}
-                            className="w-5 h-5 text-[#FB7D2D] rounded focus:ring-[#FB7D2D]"
+                            className="w-5 h-5 text-[#2E3D88] rounded focus:ring-[#2E3D88]"
                           />
                           <label
                             htmlFor="canSelectMultipleOptions"
@@ -1307,7 +1307,7 @@ const ProductDetails = () => {
                             name="isSelectionRequired"
                             checked={addonTypeForm.isSelectionRequired}
                             onChange={handleAddonTypeFormChange}
-                            className="w-5 h-5 text-[#FB7D2D] rounded focus:ring-[#FB7D2D]"
+                            className="w-5 h-5 text-[#2E3D88] rounded focus:ring-[#2E3D88]"
                           />
                           <label
                             htmlFor="isSelectionRequired"
@@ -1412,7 +1412,7 @@ const ProductDetails = () => {
                                     e.target.value,
                                   )
                                 }
-                                className="w-full px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white focus:ring-1 focus:ring-[#FB7D2D] focus:border-transparent"
+                                className="w-full px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white focus:ring-1 focus:ring-[#2E3D88] focus:border-transparent"
                                 placeholder="اسم الخيار"
                                 required
                               />
@@ -1430,7 +1430,7 @@ const ProductDetails = () => {
                                 }
                                 min="0"
                                 step="0.01"
-                                className="w-full px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white focus:ring-1 focus:ring-[#FB7D2D] focus:border-transparent"
+                                className="w-full px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded dark:bg-gray-700 dark:text-white focus:ring-1 focus:ring-[#2E3D88] focus:border-transparent"
                                 placeholder="السعر (ج.م)"
                               />
                             </div>
@@ -1462,7 +1462,7 @@ const ProductDetails = () => {
                       !isAddingNewAddonType &&
                       newAddonOptions.length > 0) ||
                     (isAddingNewAddonType && addonTypeForm.name.trim())
-                      ? "bg-[#FB7D2D] text-white hover:shadow-lg transition-all border-[#FB7D2D] hover:bg-[#e66a1f]"
+                      ? "bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white hover:shadow-lg transition-all border-[#2E3D88]"
                       : "bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed border-gray-400"
                   }`}
                 >
@@ -1487,7 +1487,7 @@ const ProductDetails = () => {
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <FaStickyNote className="text-[#FB7D2D] text-xl" />
+                  <FaStickyNote className="text-[#2E3D88] text-xl" />
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white">
                     تعليمات إضافية
                   </h3>
@@ -1509,7 +1509,7 @@ const ProductDetails = () => {
                   value={additionalNotes}
                   onChange={(e) => setAdditionalNotes(e.target.value)}
                   placeholder="اكتب تعليماتك هنا..."
-                  className="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#FB7D2D] focus:border-transparent resize-none"
+                  className="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-[#2E3D88] focus:border-transparent resize-none"
                   dir="rtl"
                   maxLength={500}
                   autoFocus
@@ -1547,7 +1547,7 @@ const ProductDetails = () => {
                 </button>
                 <button
                   onClick={handleSaveNotes}
-                  className="flex-1 py-3 bg-[#FB7D2D] text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 border border-[#FB7D2D] hover:bg-[#e66a1f]"
+                  className="flex-1 py-3 bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white rounded-lg font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 border border-[#2E3D88]"
                 >
                   <FaCheck className="text-sm" />
                   حفظ
@@ -1560,7 +1560,7 @@ const ProductDetails = () => {
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#FB7D2D] text-white rounded-full p-3 sm:p-4 shadow-2xl z-40 cursor-pointer hover:scale-110 transition-transform duration-200 border-2 border-white ${
+          className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white rounded-full p-3 sm:p-4 shadow-2xl z-40 cursor-pointer hover:scale-110 transition-transform duration-200 border-2 border-white ${
             cartItemsCount === 0 ? "opacity-70" : ""
           }`}
           onClick={navigateToCart}
@@ -1568,7 +1568,7 @@ const ProductDetails = () => {
           <div className="relative">
             <FaShoppingCart className="w-4 h-4 sm:w-6 sm:h-6" />
             {cartItemsCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-white text-[#FB7D2D] rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center text-xs font-bold border border-[#FB7D2D]">
+              <span className="absolute -top-2 -right-2 bg-white text-[#2E3D88] rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center text-xs font-bold border border-[#2E3D88]">
                 {cartItemsCount}
               </span>
             )}
@@ -1606,7 +1606,7 @@ const ProductDetails = () => {
                     animate={{ scale: 1 }}
                     className="absolute top-3 md:top-4 left-3 md:left-4 z-10"
                   >
-                    <div className="bg-[#FB7D2D] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl shadow-2xl flex items-center gap-1.5 md:gap-2 border border-white">
+                    <div className="bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl shadow-2xl flex items-center gap-1.5 md:gap-2 border border-white">
                       <FaFire className="text-white animate-pulse" size={14} />
                       <span className="text-xs md:text-sm font-bold whitespace-nowrap">
                         {formatOfferText(product.itemOffer)}
@@ -1712,17 +1712,17 @@ const ProductDetails = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-4 md:mb-6">
                       {product.calories && (
                         <div
-                          className="bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30 p-3 md:p-4 rounded-xl md:rounded-2xl text-center border border-orange-200"
+                          className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/30 dark:to-blue-800/30 p-3 md:p-4 rounded-xl md:rounded-2xl text-center border border-indigo-200"
                           dir="rtl"
                         >
                           <div className="flex items-center justify-center gap-2 mb-1 md:mb-2">
-                            <FaFire className="text-orange-500 text-base md:text-lg" />
+                            <FaFire className="text-indigo-500 text-base md:text-lg" />
                             <span className="font-semibold text-gray-700 dark:text-gray-300 text-sm md:text-base">
                               السعرات الحرارية
                             </span>
                           </div>
 
-                          <div className="text-orange-600 dark:text-orange-400 font-bold text-lg md:text-xl">
+                          <div className="text-indigo-600 dark:text-indigo-400 font-bold text-lg md:text-xl">
                             {toArabicNumbers(product.calories)} كالوري
                           </div>
                         </div>
@@ -1731,17 +1731,17 @@ const ProductDetails = () => {
                       {(product.preparationTimeStart ||
                         product.preparationTimeEnd) && (
                         <div
-                          className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 p-3 md:p-4 rounded-xl md:rounded-2xl text-center border border-blue-200"
+                          className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/30 dark:to-blue-800/30 p-3 md:p-4 rounded-xl md:rounded-2xl text-center border border-indigo-200"
                           dir="rtl"
                         >
                           <div className="flex items-center justify-center gap-2 mb-1 md:mb-2">
-                            <FaClock className="text-blue-500 text-base md:text-lg" />
+                            <FaClock className="text-indigo-500 text-base md:text-lg" />
                             <span className="font-semibold text-gray-700 dark:text-gray-300 text-sm md:text-base">
                               وقت التحضير
                             </span>
                           </div>
 
-                          <div className="text-blue-600 dark:text-blue-400 font-bold text-base md:text-lg">
+                          <div className="text-indigo-600 dark:text-indigo-400 font-bold text-base md:text-lg">
                             {product.preparationTimeStart &&
                             product.preparationTimeEnd
                               ? `${toArabicNumbers(
@@ -1768,7 +1768,7 @@ const ProductDetails = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={handleOpenAddAddonTypeModal}
-                            className="bg-[#8B5CF6] text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg transition-all border border-[#8B5CF6] hover:bg-[#7C3AED]"
+                            className="bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg transition-all border border-purple-600 hover:bg-purple-600"
                             dir="rtl"
                           >
                             <FaLayerGroup />
@@ -1835,7 +1835,7 @@ const ProductDetails = () => {
                                       }
                                       className={`w-full p-2 md:p-3 rounded-lg md:rounded-xl border-2 transition-all duration-200 flex items-center justify-between ${
                                         isSelected
-                                          ? "border-[#FB7D2D] bg-orange-50 dark:bg-orange-900/20"
+                                          ? "border-[#2E3D88] bg-blue-50 dark:bg-blue-900/20"
                                           : "border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-500"
                                       }`}
                                       dir="rtl"
@@ -1844,14 +1844,14 @@ const ProductDetails = () => {
                                         <span
                                           className={`font-medium text-sm md:text-base ${
                                             isSelected
-                                              ? "text-[#FB7D2D]"
+                                              ? "text-[#2E3D88]"
                                               : "text-gray-700 dark:text-gray-300"
                                           }`}
                                         >
                                           {option.name}
                                         </span>
                                         {isSelected && (
-                                          <FaCheck className="text-[#FB7D2D] text-xs md:text-sm" />
+                                          <FaCheck className="text-[#2E3D88] text-xs md:text-sm" />
                                         )}
                                       </div>
 
@@ -1906,7 +1906,7 @@ const ProductDetails = () => {
                         className={`w-full rounded-xl md:rounded-2xl p-3 md:p-4 text-center transition-all duration-300 cursor-pointer border ${
                           additionalNotes
                             ? "bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 border-green-300 dark:border-green-600 hover:border-green-400 dark:hover:border-green-500"
-                            : "bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30 border-[#FB7D2D] dark:border-orange-600 hover:border-[#FB7D2D] dark:hover:border-orange-500"
+                            : "bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/30 dark:to-blue-800/30 border-[#2E3D88] dark:border-indigo-600 hover:border-[#2E3D88] dark:hover:border-indigo-500"
                         }`}
                         dir="rtl"
                       >
@@ -1915,14 +1915,14 @@ const ProductDetails = () => {
                             className={`p-2 rounded-full border ${
                               additionalNotes
                                 ? "bg-green-100 dark:bg-green-800/50 border-green-300"
-                                : "bg-orange-100 dark:bg-orange-800/50 border-orange-300"
+                                : "bg-indigo-100 dark:bg-indigo-800/50 border-indigo-300"
                             }`}
                           >
                             <FaStickyNote
                               className={`text-xl ${
                                 additionalNotes
                                   ? "text-green-600 dark:text-green-400"
-                                  : "text-[#FB7D2D]"
+                                  : "text-[#2E3D88]"
                               }`}
                             />
                           </div>
@@ -1931,7 +1931,7 @@ const ProductDetails = () => {
                               className={`font-semibold text-base md:text-lg ${
                                 additionalNotes
                                   ? "text-green-700 dark:text-green-300"
-                                  : "text-[#FB7D2D]"
+                                  : "text-[#2E3D88]"
                               }`}
                             >
                               {additionalNotes
@@ -1942,7 +1942,7 @@ const ProductDetails = () => {
                               className={`text-xs md:text-sm mt-1 ${
                                 additionalNotes
                                   ? "text-green-600/70 dark:text-green-400/70"
-                                  : "text-[#FB7D2D]/70"
+                                  : "text-[#2E3D88]/70"
                               }`}
                             >
                               {additionalNotes
@@ -1995,7 +1995,7 @@ const ProductDetails = () => {
                     </button>
                   </div>
 
-                  <div className="text-xl md:text-2xl font-bold text-[#FB7D2D] whitespace-nowrap text-center sm:text-right order-1 sm:order-2">
+                  <div className="text-xl md:text-2xl font-bold text-[#2E3D88] whitespace-nowrap text-center sm:text-right order-1 sm:order-2">
                     الإجمالي:{" "}
                     {toArabicNumbers(calculateTotalPrice().toFixed(2))} ج.م
                   </div>
@@ -2010,7 +2010,7 @@ const ProductDetails = () => {
                     addingToCart
                       ? "bg-gradient-to-r from-gray-500 to-gray-600 text-white cursor-wait"
                       : isProductAvailableForCart()
-                        ? "bg-gradient-to-r from-[#FB7D2D] to-[#FDB913] text-white"
+                        ? "bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white"
                         : "bg-gray-400 text-gray-200 cursor-not-allowed"
                   }`}
                   dir="rtl"

@@ -31,7 +31,7 @@ export default function DeliveryAreaCard({
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
             <div className="p-2 sm:p-3 bg-white dark:bg-gray-700 rounded-xl sm:rounded-2xl border border-gray-300 dark:border-gray-500">
-              <FaMapMarkerAlt className="text-[#FB7D2D] text-lg sm:text-xl" />
+              <FaMapMarkerAlt className="text-[#2E3D88] text-lg sm:text-xl" />
             </div>
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2 mb-1">
@@ -56,12 +56,12 @@ export default function DeliveryAreaCard({
 
           <div className="grid grid-cols-1 xs:grid-cols-2 gap-3 sm:gap-4">
             <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-white dark:bg-gray-700 rounded-xl border border-gray-300 dark:border-gray-600">
-              <FaMoneyBillWave className="text-[#FB7D2D] text-lg flex-shrink-0" />
+              <FaMoneyBillWave className="text-[#2E3D88] text-lg flex-shrink-0" />
               <div>
                 <p className="text-xs text-gray-600 dark:text-gray-400">
                   تكلفة التوصيل
                 </p>
-                <p className="font-bold text-[#FB7D2D] text-lg">
+                <p className="font-bold text-[#2E3D88] text-lg">
                   ج.م {area.deliveryCost.toFixed(2)}
                 </p>
               </div>

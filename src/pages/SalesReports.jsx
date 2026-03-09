@@ -397,7 +397,7 @@ const OrderDetailsModal = ({ order, onClose }) => {
         className="relative bg-white dark:bg-gray-800 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden shadow-2xl"
       >
         {/* Header */}
-        <div className="bg-[#FB7D2D] p-6 relative border-b border-white">
+        <div className="bg-[#2E3D88] p-6 relative border-b border-white">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-white/20 backdrop-blur-sm rounded-2xl border border-white">
@@ -423,7 +423,7 @@ const OrderDetailsModal = ({ order, onClose }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-200 dark:border-gray-600">
               <div className="flex items-center gap-2 mb-4">
-                <FaUser className="text-[#FB7D2D]" />
+                <FaUser className="text-[#2E3D88]" />
                 <h3 className="font-bold text-gray-800 dark:text-white">
                   معلومات العميل
                 </h3>
@@ -450,7 +450,7 @@ const OrderDetailsModal = ({ order, onClose }) => {
 
             <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-200 dark:border-gray-600">
               <div className="flex items-center gap-2 mb-4">
-                <FaMapMarkerAlt className="text-[#FB7D2D]" />
+                <FaMapMarkerAlt className="text-[#2E3D88]" />
                 <h3 className="font-bold text-gray-800 dark:text-white">
                   معلومات التوصيل
                 </h3>
@@ -495,7 +495,7 @@ const OrderDetailsModal = ({ order, onClose }) => {
 
           <div className="mb-6">
             <div className="flex items-center gap-2 mb-4">
-              <FaBox className="text-[#FB7D2D]" />
+              <FaBox className="text-[#2E3D88]" />
               <h3 className="font-bold text-gray-800 dark:text-white">
                 المنتجات المطلوبة
               </h3>
@@ -596,7 +596,7 @@ const OrderDetailsModal = ({ order, onClose }) => {
                               </p>
                               <p className="font-bold text-lg text-green-600 dark:text-green-400">
                                 {isPriceBasedOnRequest ? (
-                                  <span className="text-[#FB7D2D]">
+                                  <span className="text-[#2E3D88]">
                                     السعر حسب الطلب
                                   </span>
                                 ) : (
@@ -673,7 +673,7 @@ const OrderDetailsModal = ({ order, onClose }) => {
                                 <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
                                   الإجمالي النهائي للمنتج
                                 </p>
-                                <p className="text-lg font-bold text-[#FB7D2D]">
+                                <p className="text-lg font-bold text-[#2E3D88]">
                                   {itemFinalPrice.toFixed(2)} ج.م
                                 </p>
                               </div>
@@ -717,7 +717,7 @@ const OrderDetailsModal = ({ order, onClose }) => {
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">
                   المبلغ النهائي
                 </p>
-                <p className="text-xl font-bold text-[#FB7D2D]">
+                <p className="text-xl font-bold text-[#2E3D88]">
                   {order.totalWithFee?.toFixed(2) || "0.00"} ج.م
                 </p>
               </div>
@@ -861,7 +861,7 @@ const SalesReports = () => {
             text: "يرجى تحديد تاريخ البداية والنهاية أولاً",
             timer: 3000,
             showConfirmButton: false,
-            confirmButtonColor: "#FB7D2D",
+            confirmButtonColor: "#2E3D88",
             background: "#fff",
             color: "#333",
           });
@@ -884,7 +884,7 @@ const SalesReports = () => {
             text: "تاريخ البداية يجب أن يكون قبل تاريخ النهاية",
             timer: 3000,
             showConfirmButton: false,
-            confirmButtonColor: "#FB7D2D",
+            confirmButtonColor: "#2E3D88",
           });
         }
       }
@@ -941,7 +941,7 @@ const SalesReports = () => {
               title: "تم تطبيق الفلترة بنجاح",
               timer: 1500,
               showConfirmButton: false,
-              confirmButtonColor: "#FB7D2D",
+              confirmButtonColor: "#2E3D88",
             });
           }
         }, 500);
@@ -971,7 +971,7 @@ const SalesReports = () => {
           text: errorMessage,
           timer: 2500,
           showConfirmButton: false,
-          confirmButtonColor: "#FB7D2D",
+          confirmButtonColor: "#2E3D88",
         });
       }
 
@@ -1019,7 +1019,7 @@ const SalesReports = () => {
           text: "فشل في تحميل تفاصيل الطلب",
           timer: 2000,
           showConfirmButton: false,
-          confirmButtonColor: "#FB7D2D",
+          confirmButtonColor: "#2E3D88",
         });
       }
     } finally {
@@ -1144,7 +1144,7 @@ const SalesReports = () => {
             text: "يرجى تحديد تاريخ البداية والنهاية أولاً",
             timer: 2000,
             showConfirmButton: false,
-            confirmButtonColor: "#FB7D2D",
+            confirmButtonColor: "#2E3D88",
           });
         }
         setIsPrinting(false);
@@ -1164,7 +1164,7 @@ const SalesReports = () => {
             text: "لا توجد بيانات لعرضها في التقرير",
             timer: 2000,
             showConfirmButton: false,
-            confirmButtonColor: "#FB7D2D",
+            confirmButtonColor: "#2E3D88",
           });
         }
         setIsPrinting(false);
@@ -1221,11 +1221,11 @@ const SalesReports = () => {
     text-align: center;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #FB7D2D;
+    border-bottom: 2px solid #2E3D88;
   }
   
   .print-header h1 {
-    color: #FB7D2D !important;
+    color: #2E3D88 !important;
     margin: 0 0 5px 0;
     font-size: 22px;
     font-weight: bold;
@@ -1240,9 +1240,9 @@ const SalesReports = () => {
   .print-info {
     margin: 15px 0;
     padding: 10px;
-    border: 1px solid #FB7D2D;
+    border: 1px solid #2E3D88;
     border-radius: 5px;
-    background: #fff5e6;
+    background: #f0f3ff;
   }
   
   .print-info div {
@@ -1259,7 +1259,7 @@ const SalesReports = () => {
   
   .stat-card {
     background: #f5f5f5 !important;
-    border: 1px solid #FB7D2D !important;
+    border: 1px solid #2E3D88 !important;
     border-radius: 5px;
     padding: 8px;
   }
@@ -1272,7 +1272,7 @@ const SalesReports = () => {
   }
   
   .stat-card p {
-    color: #FB7D2D !important;
+    color: #2E3D88 !important;
     margin: 0;
     font-size: 14px;
     font-weight: bold;
@@ -1287,25 +1287,25 @@ const SalesReports = () => {
   }
   
   .print-table th {
-    background-color: #FB7D2D !important;
+    background-color: #2E3D88 !important;
     color: white !important;
     padding: 6px 3px;
     text-align: center;
-    border: 1px solid #e66a1f !important;
+    border: 1px solid #4A5DB0 !important;
     font-weight: bold;
     font-size: 9px;
   }
   
   .print-table td {
     padding: 5px 3px;
-    border: 1px solid #FB7D2D !important;
+    border: 1px solid #2E3D88 !important;
     text-align: center;
     color: black !important;
     font-size: 8px;
   }
   
   .print-table tr:nth-child(even) {
-    background-color: #fff5e6 !important;
+    background-color: #f0f3ff !important;
   }
   
   .customer-name {
@@ -1330,7 +1330,7 @@ const SalesReports = () => {
     color: #666 !important;
     font-size: 9px;
     padding-top: 10px;
-    border-top: 1px solid #FB7D2D;
+    border-top: 1px solid #2E3D88;
   }
   
   .no-data {
@@ -1447,7 +1447,7 @@ ${
         `;
         })
         .join("")}
-      <tr style="background-color: #FB7D2D !important; color: white !important; font-weight: bold;">
+      <tr style="background-color: #2E3D88 !important; color: white !important; font-weight: bold;">
         <td colspan="6" style="text-align: left; padding-right: 20px; color: white !important;">المجموع الكلي:</td>
         <td class="total-amount" style="text-align: center; color: white !important;">${formatCurrencyArabic(
           printSummary.totalSales || 0,
@@ -1462,8 +1462,8 @@ ${
   printSummary?.topProducts && printSummary.topProducts.length > 0
     ? `
 <div style="margin-top: 30px;">
-  <div style="text-align: center; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #FB7D2D;">
-    <h2 style="margin: 0; font-size: 16px; color: #FB7D2D;">المنتجات الأكثر مبيعاً</h2>
+  <div style="text-align: center; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #2E3D88;">
+    <h2 style="margin: 0; font-size: 16px; color: #2E3D88;">المنتجات الأكثر مبيعاً</h2>
   </div>
   <table class="print-table">
     <thead>
@@ -1545,7 +1545,7 @@ ${
           text: "فشل في تحميل بيانات الطباعة",
           timer: 2000,
           showConfirmButton: false,
-          confirmButtonColor: "#FB7D2D",
+          confirmButtonColor: "#2E3D88",
         });
       }
       setIsPrinting(false);
@@ -1623,8 +1623,8 @@ ${
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FB7D2D]"></div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#2E3D88]"></div>
       </div>
     );
   }
@@ -1640,12 +1640,12 @@ ${
       </Helmet>
       <div
         dir="rtl"
-        className="min-h-screen bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 md:px-6 py-6 relative font-sans overflow-hidden transition-colors duration-300"
+        className="min-h-screen bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 md:px-6 py-6 relative font-sans overflow-hidden transition-colors duration-300"
       >
         {/* Background decorations */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-10 -top-10 w-40 h-40 sm:w-60 sm:h-60 bg-gradient-to-r from-[#FB7D2D]/10 to-[#000000]/10 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute -right-10 -bottom-10 w-40 h-40 sm:w-60 sm:h-60 bg-gradient-to-r from-[#000000]/10 to-[#FB7D2D]/10 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute -left-10 -top-10 w-40 h-40 sm:w-60 sm:h-60 bg-gradient-to-r from-[#2E3D88]/10 to-[#4A5DB0]/10 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute -right-10 -bottom-10 w-40 h-40 sm:w-60 sm:h-60 bg-gradient-to-r from-[#4A5DB0]/10 to-[#2E3D88]/10 rounded-full blur-2xl animate-pulse"></div>
         </div>
 
         <motion.div
@@ -1655,7 +1655,7 @@ ${
           className="max-w-7xl mx-auto bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl shadow-xl rounded-2xl sm:rounded-3xl border border-white/50 dark:border-gray-700/50 relative overflow-hidden transition-colors duration-300"
         >
           {/* Header */}
-          <div className="bg-[#FB7D2D] px-6 py-8 relative overflow-hidden border-b border-white">
+          <div className="bg-[#2E3D88] px-6 py-8 relative overflow-hidden border-b border-white">
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="flex items-center gap-3">
@@ -1685,7 +1685,7 @@ ${
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
                 <div className="flex items-center gap-2">
-                  <FaCalendarAlt className="text-[#FB7D2D] text-xl" />
+                  <FaCalendarAlt className="text-[#2E3D88] text-xl" />
                   <h3 className="text-lg font-bold text-gray-800 dark:text-white">
                     فلترة بتاريخ وفرع
                   </h3>
@@ -1701,7 +1701,7 @@ ${
                     من تاريخ
                   </label>
                   <div className="relative">
-                    <FaCalendarAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#FB7D2D]" />
+                    <FaCalendarAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#2E3D88]" />
                     <DatePicker
                       selected={startDate}
                       onChange={(date) => setStartDate(date)}
@@ -1709,7 +1709,7 @@ ${
                       startDate={startDate}
                       endDate={endDate}
                       dateFormat="dd/MM/yyyy"
-                      className="w-full pl-10 pr-3 py-2.5 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#FB7D2D] focus:border-transparent outline-none text-right"
+                      className="w-full pl-10 pr-3 py-2.5 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#2E3D88] focus:border-transparent outline-none text-right"
                       locale="ar"
                       placeholderText="اختر تاريخ البداية"
                     />
@@ -1721,7 +1721,7 @@ ${
                     إلى تاريخ
                   </label>
                   <div className="relative">
-                    <FaCalendarAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#FB7D2D]" />
+                    <FaCalendarAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#2E3D88]" />
                     <DatePicker
                       selected={endDate}
                       onChange={(date) => setEndDate(date)}
@@ -1730,7 +1730,7 @@ ${
                       endDate={endDate}
                       minDate={startDate}
                       dateFormat="dd/MM/yyyy"
-                      className="w-full pl-10 pr-3 py-2.5 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#FB7D2D] focus:border-transparent outline-none text-right"
+                      className="w-full pl-10 pr-3 py-2.5 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#2E3D88] focus:border-transparent outline-none text-right"
                       locale="ar"
                       placeholderText="اختر تاريخ النهاية"
                     />
@@ -1750,18 +1750,18 @@ ${
                         }
                         className={`w-full flex items-center justify-between px-3 py-2.5 border ${
                           isBranchDropdownOpen
-                            ? "border-[#FB7D2D] ring-2 ring-[#FB7D2D]/30"
+                            ? "border-[#2E3D88] ring-2 ring-[#2E3D88]/30"
                             : "border-gray-300 dark:border-gray-600"
-                        } dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#FB7D2D] focus:border-transparent outline-none text-right group transition-all`}
+                        } dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-[#2E3D88] focus:border-transparent outline-none text-right group transition-all`}
                       >
                         <div className="flex items-center gap-2">
-                          <FaBuilding className="text-[#FB7D2D]" />
+                          <FaBuilding className="text-[#2E3D88]" />
                           <span className="text-sm">
                             {getSelectedBranchName()}
                           </span>
                         </div>
                         <FaChevronDown
-                          className={`text-[#FB7D2D] transition-transform duration-300 ${
+                          className={`text-[#2E3D88] transition-transform duration-300 ${
                             isBranchDropdownOpen ? "rotate-180" : ""
                           }`}
                         />
@@ -1772,9 +1772,9 @@ ${
                           <div className="py-1">
                             <button
                               onClick={() => handleBranchSelect("all")}
-                              className={`w-full text-right px-4 py-3 hover:bg-orange-50 dark:hover:bg-gray-700 transition-all text-sm ${
+                              className={`w-full text-right px-4 py-3 hover:bg-blue-50 dark:hover:bg-gray-700 transition-all text-sm ${
                                 selectedBranch === "all"
-                                  ? "bg-orange-50 dark:bg-gray-700"
+                                  ? "bg-blue-50 dark:bg-gray-700"
                                   : ""
                               }`}
                             >
@@ -1784,9 +1784,9 @@ ${
                               <button
                                 key={branch.id}
                                 onClick={() => handleBranchSelect(branch.id)}
-                                className={`w-full text-right px-4 py-3 hover:bg-orange-50 dark:hover:bg-gray-700 transition-all text-sm ${
+                                className={`w-full text-right px-4 py-3 hover:bg-blue-50 dark:hover:bg-gray-700 transition-all text-sm ${
                                   selectedBranch === branch.id
-                                    ? "bg-orange-50 dark:bg-gray-700"
+                                    ? "bg-blue-50 dark:bg-gray-700"
                                     : ""
                                 }`}
                               >
@@ -1812,7 +1812,7 @@ ${
                       disabled={!startDate || !endDate}
                       className={`flex-1 px-4 py-2.5 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 ${
                         startDate && endDate
-                          ? "bg-[#FB7D2D] text-white cursor-pointer hover:bg-[#e66a1f] border border-[#FB7D2D]"
+                          ? "bg-[#2E3D88] text-white cursor-pointer hover:bg-[#4A5DB0] border border-[#2E3D88]"
                           : "bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed"
                       }`}
                     >
@@ -1927,7 +1927,7 @@ ${
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
-                    <FaChartBar className="text-[#FB7D2D] text-xl" />
+                    <FaChartBar className="text-[#2E3D88] text-xl" />
                     <h3 className="text-lg font-bold text-gray-800 dark:text-white">
                       المنتجات الأكثر مبيعاً
                     </h3>
@@ -1944,7 +1944,7 @@ ${
                       className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-700"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-[#FB7D2D] flex items-center justify-center text-white font-bold border border-white">
+                        <div className="w-8 h-8 rounded-lg bg-[#2E3D88] flex items-center justify-center text-white font-bold border border-white">
                           {index + 1}
                         </div>
                         <div>
@@ -1980,7 +1980,7 @@ ${
                   <div className="px-4 sm:px-6 py-4 border-b border-gray-200 dark:border-gray-700">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <FaListAlt className="text-[#FB7D2D] text-xl" />
+                        <FaListAlt className="text-[#2E3D88] text-xl" />
                         <h3 className="text-lg font-bold text-gray-800 dark:text-white">
                           تفاصيل الطلبات
                         </h3>
@@ -1995,7 +1995,7 @@ ${
                   {loadingPage && (
                     <div className="flex justify-center items-center py-12">
                       <div className="flex flex-col items-center gap-4">
-                        <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-[#FB7D2D]"></div>
+                        <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-[#2E3D88]"></div>
                       </div>
                     </div>
                   )}
@@ -2087,7 +2087,7 @@ ${
                                   {getStatusLabel(order.status)}
                                 </span>
                               </td>
-                              <td className="px-4 py-3 text-center font-bold text-[#FB7D2D]">
+                              <td className="px-4 py-3 text-center font-bold text-[#2E3D88]">
                                 {formatCurrency(order.totalWithFee)}
                               </td>
                               <td className="px-4 py-3 text-center">
@@ -2098,7 +2098,7 @@ ${
                                     handleViewOrderDetails(order.id)
                                   }
                                   disabled={loadingDetails}
-                                  className="flex items-center justify-center gap-2 px-4 py-2 bg-[#FB7D2D] text-white rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 mx-auto hover:bg-[#e66a1f] border border-[#FB7D2D]"
+                                  className="flex items-center justify-center gap-2 px-4 py-2 bg-[#2E3D88] text-white rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300 mx-auto hover:bg-[#4A5DB0] border border-[#2E3D88]"
                                 >
                                   {loadingDetails &&
                                   selectedOrder?.id === order.id ? (
@@ -2121,7 +2121,7 @@ ${
                               المجموع الكلي:
                             </td>
                             <td className="px-4 py-3 text-center">
-                              <span className="text-xl font-bold text-[#FB7D2D]">
+                              <span className="text-xl font-bold text-[#2E3D88]">
                                 {formatCurrency(summary?.totalSales || 0)}
                               </span>
                             </td>
@@ -2166,7 +2166,7 @@ ${
                                 disabled={loadingPage}
                                 className={`px-3 sm:px-4 py-1 sm:py-2 rounded-xl font-semibold border ${
                                   currentPage === pageNum
-                                    ? "bg-[#FB7D2D] text-white shadow-lg border-[#FB7D2D]"
+                                    ? "bg-[#2E3D88] text-white shadow-lg border-[#2E3D88]"
                                     : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-300 dark:border-gray-600"
                                 } ${loadingPage ? "opacity-50 cursor-not-allowed" : ""}`}
                               >

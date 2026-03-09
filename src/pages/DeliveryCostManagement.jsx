@@ -37,8 +37,8 @@ export default function DeliveryCostManagement() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FB7D2D]"></div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#2E3D88]"></div>
       </div>
     );
   }
@@ -52,7 +52,7 @@ export default function DeliveryCostManagement() {
           content="نوفر لك كل ما تحتاجه من أدوية ومنتجات طبية وعناية شخصية بجودة عالية وخدمة مميزة."
         />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-white via-[#fff5e6] to-[#ffe4cc] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 py-4 sm:py-8 transition-colors duration-300">
+      <div className="min-h-screen bg-gradient-to-br from-white via-[#f0f3ff] to-[#d9e0f5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 py-4 sm:py-8 transition-colors duration-300">
         <div className="max-w-7xl mx-auto" dir="rtl">
           <HeaderStats
             deliveryAreasCount={deliveryAreas.length}
@@ -106,7 +106,7 @@ export default function DeliveryCostManagement() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsAdding(true)}
-                    className="flex items-center gap-2 bg-[#FB7D2D] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base mx-auto border border-white"
+                    className="flex items-center gap-2 bg-gradient-to-r from-[#2E3D88] to-[#4A5DB0] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base mx-auto border border-white"
                   >
                     <span>أضف أول منطقة</span>
                     <FaPlus className="text-xs sm:text-sm" />
